@@ -12,6 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Mukta+Malar:wght@400;600;700&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -76,6 +79,24 @@
     }
     .custom-scrollbar::-webkit-scrollbar-track {
       background: #f0ebe4;
+    }
+    /* Hero Swiper custom styles */
+    .hero-swiper {
+      width: 100%;
+      height: 100%;
+    }
+    .hero-swiper .swiper-pagination-bullet {
+      background: rgba(255, 255, 255, 0.65) !important;
+      width: 10px !important;
+      height: 10px !important;
+      opacity: 0.8 !important;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    .hero-swiper .swiper-pagination-bullet-active {
+      background: #d49e1a !important;
+      opacity: 1 !important;
+      width: 28px !important;
+      border-radius: 9999px !important;
     }
   </style>
 </head>
@@ -192,77 +213,89 @@
     <!-- ================= VIEW 1: HOME ================= -->
     <section id="view-home" class="view-section active">
       
-      <!-- Hero Banner -->
-      <div class="relative bg-brand-maroondark text-white overflow-hidden py-16 sm:py-24 bg-pattern">
-        <div class="absolute inset-0 bg-gradient-to-r from-brand-maroondark via-brand-maroon/90 to-brand-maroondark/70 pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <!-- ================= HERO SECTION: PHOTO SWIPER ================= -->
+      <div class="relative bg-brand-maroondark overflow-hidden border-b border-brand-warmgray">
+        <div class="swiper hero-swiper h-[360px] sm:h-[480px] md:h-[540px] lg:h-[620px] w-full">
+          <div class="swiper-wrapper">
             
-            <div class="lg:col-span-7 space-y-6">
-              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-goldlight text-xs font-bold tracking-wider uppercase">
-                <span class="material-symbols-outlined text-[16px]">verified</span>
-                <span>Govt. Aided Girls Higher Secondary School • Estd. 1981</span>
-              </div>
-
-              <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
-                Empowering Young Women with <span class="text-gold-gradient">Wisdom, Faith & Excellence</span>
-              </h1>
-
-              <p class="text-gray-200 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
-                For over four decades, St. Isabel's Girls Higher Secondary School has stood as Pattukkottai's premier bastion of academic distinction, holistic character formation, and compassionate stewardship under the Congregation of the Sisters of Bon Secours.
-              </p>
-
-              <div class="flex flex-wrap items-center gap-3 pt-2">
-                <a href="#achievements" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-gold hover:bg-brand-goldlight text-brand-maroondark font-bold shadow-lg transition-all hover:scale-[1.02]">
-                  <span>Explore 10th & 12th Results</span>
-                  <span class="material-symbols-outlined text-[18px]">trending_up</span>
-                </a>
-                <a href="#admissions" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm font-semibold transition-all">
-                  <span class="material-symbols-outlined text-[18px] text-brand-gold">school</span>
-                  <span>Admissions 2025–26</span>
-                </a>
-                <a href="#gallery" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-black/30 hover:bg-black/40 text-gray-200 border border-white/10 font-medium transition-all">
-                  <span class="material-symbols-outlined text-[18px]">photo_library</span>
-                  <span>Campus Life</span>
-                </a>
-              </div>
-
-              <!-- Quick highlight bullet tags -->
-              <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-brand-goldlight">
-                <div class="flex items-center gap-2">
-                  <span class="material-symbols-outlined text-brand-gold text-[16px]">star</span>
-                  <span>State 3rd Rank (496/500)</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="material-symbols-outlined text-brand-gold text-[16px]">check_circle</span>
-                  <span>100% Board Pass Record</span>
-                </div>
-                <div class="flex items-center gap-2">
-                  <span class="material-symbols-outlined text-brand-gold text-[16px]">psychology</span>
-                  <span>AIM Top 1000 Innovation</span>
-                </div>
-              </div>
+            <!-- Slide 1 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/third-rank-state-level.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/third-rank-state-level.jpeg" alt="St. Isabel's State 3rd Rank Felicitation" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
             </div>
 
-            <!-- Hero Image Visual Showcase -->
-            <div class="lg:col-span-5 relative">
-              <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-gold/30 group">
-                <img src="images/third-rank-state-level.jpeg" alt="St. Isabel's State 3rd Rank & District 1st Rank Felicitation" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-brand-maroondark via-transparent to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-brand-maroondark/90 backdrop-blur-md border border-brand-gold/30 text-white">
-                  <div class="flex items-center justify-between">
-                    <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Pinnacle Triumph</span>
-                    <span class="px-2 py-0.5 rounded bg-brand-gold text-brand-maroondark text-[10px] font-bold">STATE RANK</span>
-                  </div>
-                  <h2 class="font-serif font-bold text-lg text-white mt-1">496 / 500 Board Record</h2>
-                  <p class="text-xs text-gray-300 mt-1">District 1st Rank & State 3rd Rank with Double Centums in Maths & Social Science.</p>
-                </div>
-              </div>
-              <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-gold/20 rounded-full blur-2xl pointer-events-none"></div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/award-100-percent-pass.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/award-100-percent-pass.jpeg" alt="100% Complete Pass Percentage Award" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/school-rank-holders.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/school-rank-holders.jpeg" alt="Board Examination Rank Holders Roll of Honour" class="relative z-10 w-full h-full object-contain mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/teachers-award-collector-office.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/teachers-award-collector-office.jpeg" alt="Teacher Appreciation Award at District Collectorate" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 5 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/book-experience-third-place.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/book-experience-third-place.jpeg" alt="State Level Book Experience Award" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 6 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/anti-drug-group.jpg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/anti-drug-group.jpg" alt="Anti-Drug Awareness Club Movement" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 7 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/sports.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/sports.jpeg" alt="Annual Sports Day & Athletics Meet" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 8 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/instagram.image.528249760_621546637279735_6253587192557959683_n.Woblo.jpg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/instagram.image.528249760_621546637279735_6253587192557959683_n.Woblo.jpg" alt="Classical Bharatanatyam Dance Performance" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/instagram.image.708192655_17888201091545494_1868167121042586520_n.Woblo.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/instagram.image.708192655_17888201091545494_1868167121042586520_n.Woblo.jpeg" alt="Pongal Celebrations and Traditional Kolam" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 10 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/instagram.image.687871902_17884767600545494_7138409106584334649_n.Woblo.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/instagram.image.687871902_17884767600545494_7138409106584334649_n.Woblo.jpeg" alt="Independence Day Celebrations" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
+            </div>
+
+            <!-- Slide 11 -->
+            <div class="swiper-slide relative w-full h-full overflow-hidden bg-brand-maroondark">
+              <img src="images/instagram.image.659029235_17877740682545494_8293723894261381217_n.Woblo.jpeg" class="absolute inset-0 w-full h-full object-cover filter blur-2xl opacity-40 scale-110 pointer-events-none" alt="" aria-hidden="true"/>
+              <img src="images/instagram.image.659029235_17877740682545494_8293723894261381217_n.Woblo.jpeg" alt="Teachers Day Celebrations" class="relative z-10 w-full h-full object-contain md:object-cover mx-auto select-none"/>
             </div>
 
           </div>
+
+          <!-- Navigation Chevrons -->
+          <button class="swiper-button-prev-custom absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-brand-maroon text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all shadow-lg hover:scale-110 focus:outline-none cursor-pointer" aria-label="Previous Slide">
+            <span class="material-symbols-outlined text-2xl sm:text-3xl text-brand-goldlight pointer-events-none">chevron_left</span>
+          </button>
+          <button class="swiper-button-next-custom absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/40 hover:bg-brand-maroon text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all shadow-lg hover:scale-110 focus:outline-none cursor-pointer" aria-label="Next Slide">
+            <span class="material-symbols-outlined text-2xl sm:text-3xl text-brand-goldlight pointer-events-none">chevron_right</span>
+          </button>
+
+          <!-- Pagination Dots -->
+          <div class="swiper-pagination !bottom-5 z-20"></div>
         </div>
       </div>
 
@@ -2045,6 +2078,11 @@
 
       // Scroll smoothly to top
       window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Update Swiper when navigating to home
+      if (route === 'home' && window.heroSwiper) {
+        setTimeout(() => window.heroSwiper.update(), 50);
+      }
     }
 
     window.addEventListener('hashchange', handleRouting);
@@ -2265,6 +2303,49 @@
       e.preventDefault();
       alert("Thank you! Your message has been sent to St. Isabel's Girls Higher Secondary School office desk. We will get back to you shortly.");
       e.target.reset();
+    }
+  </script>
+
+  <!-- Swiper JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    let heroSwiper = null;
+    function initHeroSwiper() {
+      heroSwiper = new Swiper('.hero-swiper', {
+        loop: true,
+        speed: 800,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
+        observer: true,
+        observeParents: true,
+        resizeObserver: true,
+        navigation: {
+          nextEl: '.swiper-button-next-custom',
+          prevEl: '.swiper-button-prev-custom'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+          dynamicBullets: true
+        },
+        keyboard: {
+          enabled: true
+        }
+      });
+      window.heroSwiper = heroSwiper;
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initHeroSwiper);
+    } else {
+      initHeroSwiper();
     }
   </script>
 
