@@ -454,7 +454,7 @@ The website narrative becomes:
 ↓
 **Government programmes**
 ↓
-**Innovation / NMMS / competitions**
+**Innovation / NMMS /    competitions**
 ↓
 **Cultural & student life**
 ↓
