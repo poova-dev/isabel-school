@@ -129,7 +129,7 @@
 
         <!-- Language Switcher Pill -->
         <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-0.5 rounded-full bg-brand-gold/15 hover:bg-brand-gold hover:text-brand-maroondark text-brand-gold text-[10px] sm:text-[11px] font-bold tracking-wider border border-brand-gold/30 transition-all cursor-pointer">
-          தமிழ் / EN
+          🌐 தமிழ்
         </button>
       </div>
     </div>
@@ -148,7 +148,7 @@
             <span class="font-tamil font-bold text-xs sm:text-base md:text-lg text-brand-maroon leading-tight tracking-tight lang-ta hidden truncate">
               புனித இசபெல்லா பெண்கள் மேல்நிலைப் பள்ளி
             </span>
-            <span class="text-[9px] sm:text-[10px] md:text-[11px] font-semibold tracking-wider text-brand-golddark uppercase truncate">
+            <span class="text-[9px] sm:text-[10px] md:text-[11px] font-semibold tracking-wider text-brand-golddark uppercase truncate" data-i18n="schoolSubtitle">
               Pattukkottai • Estd. 1981 • Bon Secours
             </span>
           </div>
@@ -156,31 +156,31 @@
 
         <!-- Desktop Navigation Links -->
         <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-gray-700" id="desktopNav">
-          <a href="#home" class="nav-link text-brand-maroon font-semibold hover:text-brand-gold transition-colors py-1">Home</a>
-          <a href="#about" class="nav-link hover:text-brand-maroon transition-colors py-1">About Us</a>
-          <a href="#academics" class="nav-link hover:text-brand-maroon transition-colors py-1">Academics</a>
-          <a href="#achievements" class="nav-link hover:text-brand-maroon transition-colors py-1">Achievements</a>
-          <a href="#activities" class="nav-link hover:text-brand-maroon transition-colors py-1">Student Life</a>
-          <a href="#gallery" class="nav-link hover:text-brand-maroon transition-colors py-1">Gallery</a>
-          <a href="#news-and-events" class="nav-link hover:text-brand-maroon transition-colors py-1">News & Circulars</a>
-          <a href="#contact" class="nav-link hover:text-brand-maroon transition-colors py-1">Contact</a>
+          <a href="#home" class="nav-link text-brand-maroon font-semibold hover:text-brand-gold transition-colors py-1" data-i18n="navHome">Home</a>
+          <a href="#about" class="nav-link hover:text-brand-maroon transition-colors py-1" data-i18n="navAbout">About Us</a>
+          <a href="#academics" class="nav-link hover:text-brand-maroon transition-colors py-1" data-i18n="navAcademics">Academics</a>
+          <a href="#achievements" class="nav-link hover:text-brand-maroon transition-colors py-1" data-i18n="navAchievements">Achievements</a>
+          <a href="#activities" class="nav-link hover:text-brand-maroon transition-colors py-1" data-i18n="navActivities">Student Life</a>
+          <a href="#gallery" class="nav-link hover:text-brand-maroon transition-colors py-1" data-i18n="navGallery">Gallery</a>
+          <a href="#news-and-events" class="nav-link hover:text-brand-maroon transition-colors py-1" data-i18n="navNews">News & Circulars</a>
+          <a href="#contact" class="nav-link hover:text-brand-maroon transition-colors py-1" data-i18n="navContact">Contact</a>
         </nav>
 
         <!-- CTA & Menu Buttons -->
         <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
-          <a href="#admissions" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-brand-maroon hover:bg-brand-maroondark text-white text-xs sm:text-sm font-semibold shadow transition-all hover:shadow-md">
+          <button onclick="openApplyModal()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-brand-maroon hover:bg-brand-maroondark text-white text-xs sm:text-sm font-semibold shadow transition-all hover:shadow-md cursor-pointer">
             <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold">how_to_reg</span>
-            <span>Apply Now</span>
-          </a>
-          <button onclick="openMarksModal()" class="hidden md:inline-flex items-center gap-1 px-3 py-2 rounded-lg bg-brand-warmgray hover:bg-brand-gold/20 text-brand-maroon text-xs font-semibold border border-brand-gold/30 transition-colors" title="Check Sample Board Results">
+            <span data-i18n="navApply">Apply Now</span>
+          </button>
+          <button onclick="openMarksModal()" class="hidden md:inline-flex items-center gap-1 px-3 py-2 rounded-lg bg-brand-warmgray hover:bg-brand-gold/20 text-brand-maroon text-xs font-semibold border border-brand-gold/30 transition-colors cursor-pointer" title="Check Sample Board Results">
             <span class="material-symbols-outlined text-[16px] text-brand-golddark">workspace_premium</span>
-            <span>Roll of Honour</span>
+            <span data-i18n="navHonour">Roll of Honour</span>
           </button>
 
-          <!-- Mobile Quick Apply button -->
-          <a href="#admissions" class="sm:hidden px-2.5 py-1 rounded-md bg-brand-maroon text-brand-gold text-[11px] font-bold shadow-sm">
-            Apply
-          </a>
+          <!-- Mobile Quick Apply button (opens modal) -->
+          <button onclick="openApplyModal()" class="sm:hidden px-2.5 py-1 rounded-md bg-brand-maroon text-brand-gold text-[11px] font-bold shadow-sm cursor-pointer">
+            <span data-i18n="navApplyShort">Apply</span>
+          </button>
 
           <!-- Mobile Hamburger Toggle -->
           <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-1.5 sm:p-2 rounded-lg text-brand-maroon hover:bg-brand-warmgray focus:outline-none" aria-label="Toggle Navigation">
@@ -196,21 +196,24 @@
     <!-- Mobile Drawer Navigation -->
     <div id="mobileMenu" class="hidden lg:hidden bg-brand-maroondark text-white border-b border-brand-maroonlight px-5 py-4 space-y-3 shadow-xl">
       <div class="grid grid-cols-2 gap-2 text-sm">
-        <a href="#home" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Home</a>
-        <a href="#about" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">About Us</a>
-        <a href="#academics" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Academics</a>
-        <a href="#achievements" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Achievements</a>
-        <a href="#activities" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Student Life</a>
-        <a href="#gallery" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Photo Gallery</a>
-        <a href="#news-and-events" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">News & Events</a>
-        <a href="#contact" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Contact Us</a>
+        <a href="#home" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon" data-i18n="navHome">Home</a>
+        <a href="#about" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon" data-i18n="navAbout">About Us</a>
+        <a href="#academics" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon" data-i18n="navAcademics">Academics</a>
+        <a href="#achievements" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon" data-i18n="navAchievements">Achievements</a>
+        <a href="#activities" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon" data-i18n="navActivities">Student Life</a>
+        <a href="#gallery" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon" data-i18n="navGallery">Photo Gallery</a>
+        <a href="#news-and-events" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon" data-i18n="navNews">News & Events</a>
+        <a href="#contact" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon" data-i18n="navContact">Contact Us</a>
       </div>
       <div class="pt-2 border-t border-brand-maroonlight/60 flex flex-col gap-2">
-        <a href="#admissions" onclick="closeMobileMenu()" class="w-full py-2.5 rounded bg-brand-gold text-brand-maroondark text-center font-bold text-sm">
-          Admissions 2025–26 Enquire
-        </a>
-        <button onclick="closeMobileMenu(); openMarksModal();" class="w-full py-2 rounded bg-brand-maroon text-brand-cream text-center text-xs font-semibold border border-brand-gold/30">
-          Check Board Exam Hall of Fame
+        <button onclick="closeMobileMenu(); openApplyModal();" class="w-full py-2.5 rounded bg-brand-gold text-brand-maroondark text-center font-bold text-sm cursor-pointer">
+          <span data-i18n="mobileEnquire">Admissions 2025–26 Enquire</span>
+        </button>
+        <button onclick="closeMobileMenu(); openMarksModal();" class="w-full py-2 rounded bg-brand-maroon text-brand-cream text-center text-xs font-semibold border border-brand-gold/30 cursor-pointer">
+          <span data-i18n="mobileHonour">Check Board Exam Hall of Fame</span>
+        </button>
+        <button onclick="toggleLanguage()" class="w-full py-2 rounded bg-brand-maroonlight hover:bg-brand-gold hover:text-brand-maroondark text-brand-gold text-xs font-bold border border-brand-gold/30 transition-colors flex items-center justify-center gap-1.5 cursor-pointer">
+          <span class="mobileLangBtnText">🌐 மொழி மாற்று / Switch to தமிழ்</span>
         </button>
       </div>
     </div>
@@ -555,21 +558,21 @@
       <!-- Admissions Banner Callout -->
       <div class="bg-brand-maroon text-white py-14">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
-          <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold tracking-wider uppercase border border-brand-gold/40">
+          <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold tracking-wider uppercase border border-brand-gold/40" data-i18n="enrolmentBadge">
             Enrolment Open 2025–2026
           </span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold">
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold" data-i18n="heroCtaTitle">
             Give Your Daughter the Gift of Transformative Education
           </h2>
-          <p class="text-gray-200 max-w-2xl mx-auto text-sm sm:text-base">
+          <p class="text-gray-200 max-w-2xl mx-auto text-sm sm:text-base" data-i18n="heroCtaDesc">
             Offering rigorous Tamil Nadu State Board education from Classes VI to XII across Bio-Maths, Computer Science, Commerce, and Arts streams with dedicated faculty mentorship.
           </p>
           <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
-            <a href="#admissions" class="px-6 py-3 rounded-lg bg-brand-gold hover:bg-brand-goldlight text-brand-maroondark font-bold shadow-lg transition-all">
-              Check Stream Eligibility & Apply
-            </a>
-            <a href="#contact" class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold transition-all">
-              Contact School Office (04373 – 252177)
+            <button onclick="openApplyModal()" class="px-6 py-3 rounded-lg bg-brand-gold hover:bg-brand-goldlight text-brand-maroondark font-bold shadow-lg transition-all cursor-pointer">
+              <span data-i18n="ctaApply">Check Stream Eligibility & Apply</span>
+            </button>
+            <a href="tel:04373252177" class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold transition-all">
+              <span data-i18n="ctaContact">Contact School Office (04373 – 252177)</span>
             </a>
           </div>
         </div>
@@ -1411,7 +1414,7 @@
               </p>
               <div class="pt-2 border-t border-gray-100 flex items-center justify-between text-xs">
                 <span class="text-gray-500 font-medium">Class 11 seats allocated on merit</span>
-                <a href="#admissions-form" class="text-brand-maroon font-bold hover:underline">Proceed to Apply →</a>
+                <button type="button" onclick="openApplyModal()" class="text-brand-maroon font-bold hover:underline cursor-pointer">Proceed to Apply →</button>
               </div>
             </div>
 
@@ -1720,9 +1723,9 @@
         <div>
           <h4 class="font-serif font-bold text-sm text-brand-gold uppercase tracking-wider mb-3">Admissions</h4>
           <ul class="space-y-2 text-xs text-gray-300">
-            <li><a href="#admissions" class="hover:text-white transition-colors">Admissions 2025–2026</a></li>
+            <li><button type="button" onclick="openApplyModal()" class="hover:text-white transition-colors text-left cursor-pointer">Admissions 2025–2026</button></li>
             <li><a href="#admissions" class="hover:text-white transition-colors">Stream Recommender</a></li>
-            <li><a href="#admissions" class="hover:text-white transition-colors">Online Application</a></li>
+            <li><button type="button" onclick="openApplyModal()" class="hover:text-white transition-colors text-left cursor-pointer">Online Application Form</button></li>
             <li><a href="#news-and-events" class="hover:text-white transition-colors">Notice Board</a></li>
           </ul>
         </div>
@@ -1848,6 +1851,118 @@
           <button onclick="closeNoticeModal()" class="px-4 py-1.5 rounded bg-brand-maroon text-white font-semibold">Close</button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!-- ================= ADMISSION APPLY POPUP MODAL ================= -->
+  <div id="applyModal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-3 sm:p-4 overflow-y-auto backdrop-blur-sm" onclick="handleApplyModalBackdrop(event)">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-5 sm:p-8 shadow-2xl relative border-2 border-brand-gold/50 my-auto animate-fade-in text-brand-charcoal">
+      
+      <!-- Close Button -->
+      <button onclick="closeApplyModal()" class="absolute top-4 right-4 h-9 w-9 rounded-full bg-brand-cream hover:bg-brand-maroon hover:text-white text-gray-500 transition-all flex items-center justify-center cursor-pointer shadow-sm" aria-label="Close Modal">
+        <span class="material-symbols-outlined text-xl">close</span>
+      </button>
+
+      <!-- Modal Header -->
+      <div class="flex items-center gap-3 border-b border-gray-100 pb-4 mb-4 pr-8">
+        <img src="images/logo.jpg" alt="School Crest" class="h-12 w-12 rounded-full object-contain p-0.5 bg-white border border-brand-gold/40 shadow-sm shrink-0"/>
+        <div>
+          <span class="px-2 py-0.5 rounded bg-brand-gold/20 text-brand-maroon text-[11px] font-bold tracking-wider uppercase" data-i18n="applyModalBadge">Admissions Open 2025–2026</span>
+          <h3 class="font-serif font-bold text-lg sm:text-xl text-brand-maroon leading-snug mt-0.5" data-i18n="applyModalTitle">Admission Enquiry & Application</h3>
+          <p class="text-[11px] sm:text-xs text-gray-500 font-medium" data-i18n="applyModalSubtitle">St. Isabel's Girls Higher Secondary School, Pattukkottai</p>
+        </div>
+      </div>
+
+      <!-- Quick Contact Shortcuts -->
+      <div class="grid grid-cols-2 gap-2.5 mb-4 text-xs font-semibold">
+        <a href="tel:04373252177" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-brand-cream text-brand-maroon border border-brand-gold/40 hover:bg-brand-gold/20 transition-colors">
+          <span class="material-symbols-outlined text-base text-brand-maroon">call</span>
+          <span data-i18n="applyModalCall">Call: 04373–252177</span>
+        </a>
+        <a href="https://wa.me/919488252177?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20admissions%20at%20St.%20Isabel's%20Girls%20HSS" target="_blank" rel="noopener" class="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-300 hover:bg-emerald-100 transition-colors">
+          <span class="material-symbols-outlined text-base text-emerald-600">chat</span>
+          <span data-i18n="applyModalWhatsapp">WhatsApp Enquiry</span>
+        </a>
+      </div>
+
+      <!-- Application Form -->
+      <form id="applyPopupForm" onsubmit="handleApplyPopupSubmit(event)" class="space-y-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1" data-i18n="applyStudentName">Student Name *</label>
+            <input type="text" id="popupStudentName" required placeholder="e.g. S. Kowsalya" class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:border-brand-maroon focus:ring-1 focus:ring-brand-maroon outline-none bg-gray-50/50"/>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1" data-i18n="applyParentName">Parent / Guardian Name *</label>
+            <input type="text" id="popupParentName" required placeholder="e.g. M. Sundaram" class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:border-brand-maroon focus:ring-1 focus:ring-brand-maroon outline-none bg-gray-50/50"/>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1" data-i18n="applyMobile">Mobile Number *</label>
+            <input type="tel" id="popupMobile" required pattern="[0-9]{10}" placeholder="10-digit mobile number" class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:border-brand-maroon focus:ring-1 focus:ring-brand-maroon outline-none bg-gray-50/50"/>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1" data-i18n="applyClass">Class Applying For *</label>
+            <select id="popupClass" required class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:border-brand-maroon focus:ring-1 focus:ring-brand-maroon outline-none bg-white">
+              <option value="">-- Select Class --</option>
+              <option value="Class VI">Class VI (6th Standard)</option>
+              <option value="Class VII">Class VII (7th Standard)</option>
+              <option value="Class VIII">Class VIII (8th Standard)</option>
+              <option value="Class IX">Class IX (9th Standard)</option>
+              <option value="Class X">Class X (SSLC Board)</option>
+              <option value="Class XI Bio-Maths">Class XI - Bio-Mathematics (NEET Track)</option>
+              <option value="Class XI Computer Science">Class XI - Computer Science & Maths</option>
+              <option value="Class XI Commerce">Class XI - Commerce & Accountancy</option>
+              <option value="Class XI Arts">Class XI - Arts & Humanities</option>
+              <option value="Class XII">Class XII (State Board Higher Secondary)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1" data-i18n="applyMedium">Medium of Instruction *</label>
+            <select id="popupMedium" required class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:border-brand-maroon focus:ring-1 focus:ring-brand-maroon outline-none bg-white">
+              <option value="Tamil Medium">Tamil Medium (தமிழ் வழி)</option>
+              <option value="English Medium">English Medium (ஆங்கில வழி)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-700 mb-1" data-i18n="applyAddress">Town / Village *</label>
+            <input type="text" id="popupAddress" required placeholder="e.g. Pattukkottai, Madukkur, etc." class="w-full text-xs p-2.5 rounded-lg border border-gray-300 focus:border-brand-maroon focus:ring-1 focus:ring-brand-maroon outline-none bg-gray-50/50"/>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full py-3 rounded-xl bg-brand-maroon hover:bg-brand-maroondark text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all cursor-pointer">
+            <span class="material-symbols-outlined text-lg text-brand-gold">how_to_reg</span>
+            <span data-i18n="applySubmit">Submit Admission Enquiry</span>
+          </button>
+        </div>
+        <p class="text-[10px] text-gray-400 text-center">Office desk: Matha Kovil Street, Pattukkottai (Mon–Sat 9:00 AM – 4:00 PM)</p>
+      </form>
+
+      <!-- Success Confirmation View -->
+      <div id="applyPopupSuccess" class="hidden text-center py-4 space-y-3">
+        <div class="h-14 w-14 rounded-full bg-emerald-100 text-emerald-600 mx-auto flex items-center justify-center shadow-inner">
+          <span class="material-symbols-outlined text-3xl">check_circle</span>
+        </div>
+        <span class="px-2.5 py-0.5 rounded-full bg-brand-gold/20 text-brand-maroon font-mono font-bold text-xs" id="popupAppToken">STIS-2025-XXXX</span>
+        <h4 class="font-serif font-bold text-xl text-brand-maroon" data-i18n="applySuccessTitle">Application Logged Successfully!</h4>
+        <p class="text-xs text-gray-600 max-w-md mx-auto leading-relaxed" data-i18n="applySuccessDesc">
+          Thank you! We have received your admission enquiry. Please visit the school office at Matha Kovil Street with student transfer certificate and previous marksheet copies.
+        </p>
+        <div class="p-3 bg-brand-cream rounded-xl text-xs text-brand-charcoal space-y-1">
+          <p><strong>School Office Phone:</strong> 04373 – 252177</p>
+          <p><strong>Working Hours:</strong> Mon–Sat 9:00 AM – 4:00 PM</p>
+        </div>
+        <button type="button" onclick="closeApplyModal()" class="px-6 py-2 rounded-xl bg-brand-maroon text-white font-bold text-xs shadow cursor-pointer">
+          Done
+        </button>
+      </div>
+
     </div>
   </div>
 
@@ -2098,14 +2213,134 @@
       document.getElementById('mobileMenu').classList.add('hidden');
     }
 
-    // ================= LANGUAGE TOGGLE =================
+    // ================= BILINGUAL TRANSLATION SYSTEM =================
+    const I18N_DICT = {
+      en: {
+        schoolSubtitle: "Pattukkottai • Estd. 1981 • Bon Secours",
+        navHome: "Home",
+        navAbout: "About Us",
+        navAcademics: "Academics",
+        navAchievements: "Achievements",
+        navActivities: "Student Life",
+        navGallery: "Gallery",
+        navNews: "News & Circulars",
+        navContact: "Contact",
+        navApply: "Apply Now",
+        navApplyShort: "Apply",
+        navHonour: "Roll of Honour",
+        mobileEnquire: "Admissions 2025–26 Enquire",
+        mobileHonour: "Check Board Exam Hall of Fame",
+        mobileLang: "🌐 தமிழ் மொழிக்கு மாற்றவும்",
+        enrolmentBadge: "Enrolment Open 2025–2026",
+        heroCtaTitle: "Give Your Daughter the Gift of Transformative Education",
+        heroCtaDesc: "Offering rigorous Tamil Nadu State Board education from Classes VI to XII across Bio-Maths, Computer Science, Commerce, and Arts streams with dedicated faculty mentorship.",
+        ctaApply: "Check Stream Eligibility & Apply",
+        ctaContact: "Contact School Office (04373 – 252177)",
+        applyModalBadge: "Admissions Open 2025–2026",
+        applyModalTitle: "Admission Enquiry & Application",
+        applyModalSubtitle: "St. Isabel's Girls Higher Secondary School, Pattukkottai",
+        applyModalCall: "Call: 04373–252177",
+        applyModalWhatsapp: "WhatsApp Enquiry",
+        applyStudentName: "Student Name *",
+        applyParentName: "Parent / Guardian Name *",
+        applyMobile: "Mobile Number *",
+        applyClass: "Class Applying For *",
+        applyMedium: "Medium of Instruction *",
+        applyAddress: "Town / Village *",
+        applySubmit: "Submit Admission Enquiry",
+        applySuccessTitle: "Application Logged Successfully!",
+        applySuccessDesc: "Thank you! We have received your admission enquiry. Please visit the school office at Matha Kovil Street with student transfer certificate and previous marksheet copies.",
+        langToggleBtn: "🌐 தமிழ்"
+      },
+      ta: {
+        schoolSubtitle: "பட்டுக்கோட்டை • நிறுவப்பட்டது 1981 • பான் செக்கர்ஸ்",
+        navHome: "முகப்பு",
+        navAbout: "எங்களைப் பற்றி",
+        navAcademics: "கல்விப்பிரிவுகள்",
+        navAchievements: "சாதனைகள்",
+        navActivities: "மாணவர் நற்பணிகள்",
+        navGallery: "புகைப்படங்கள்",
+        navNews: "செய்திகள்",
+        navContact: "தொடர்பு",
+        navApply: "விண்ணப்பிக்கவும்",
+        navApplyShort: "விண்ணப்பிக்க",
+        navHonour: "மதிப்பெண் சாதனையாளர்கள்",
+        mobileEnquire: "மாணவர் சேர்க்கை 2025–26 விண்ணப்பிக்க",
+        mobileHonour: "அரசு பொதுத்தேர்வு சாதனையாளர்கள் பட்டியல்",
+        mobileLang: "🌐 Switch to English",
+        enrolmentBadge: "மாணவர் சேர்க்கை 2025–2026",
+        heroCtaTitle: "உங்கள் மகளுக்கு சிறந்த எதிர்காலத்தையும் தரமான கல்வியையும் அளியுங்கள்",
+        heroCtaDesc: "6-ஆம் வகுப்பு முதல் 12-ஆம் வகுப்பு வரை கணிதம், உயிரியல், கணினி அறிவியல், வணிகவியல் ஆகிய பிரிவுகளில் சிறந்த தமிழ்நாடு பாடத்திட்டக் கல்வி.",
+        ctaApply: "பாடப்பிரிவு தகுதி & விண்ணப்பம்",
+        ctaContact: "பள்ளி அலுவலகம் (04373 – 252177)",
+        applyModalBadge: "சேர்க்கை துவங்கப்பட்டுள்ளது 2025–2026",
+        applyModalTitle: "மாணவர் சேர்க்கை விண்ணப்பம்",
+        applyModalSubtitle: "புனித இசபெல்லா பெண்கள் மேல்நிலைப் பள்ளி, பட்டுக்கோட்டை",
+        applyModalCall: "அழைக்க: 04373–252177",
+        applyModalWhatsapp: "வாட்ஸ்அப் செய்தி",
+        applyStudentName: "மாணவி பெயர் *",
+        applyParentName: "பெற்றோர் / பாதுகாவலர் பெயர் *",
+        applyMobile: "கைபேசி எண் *",
+        applyClass: "சேர விரும்பும் வகுப்பு *",
+        applyMedium: "பயிற்று மொழி *",
+        applyAddress: "வசிப்பிடம் / ஊர் *",
+        applySubmit: "விண்ணப்பத்தை சமர்ப்பிக்கவும்",
+        applySuccessTitle: "விண்ணப்பம் வெற்றிகரமாகப் பதிவு செய்யப்பட்டது!",
+        applySuccessDesc: "நன்றி! தங்களது சேர்க்கை விவரங்கள் பெறப்பட்டது. மாற்றுச் சான்றிதழ் மற்றும் முந்தைய மதிப்பெண் நகல்களுடன் பள்ளி அலுவலகத்தை நேரில் அணுகவும்.",
+        langToggleBtn: "🌐 English"
+      }
+    };
+
     let currentLang = 'en';
-    function toggleLanguage() {
-      currentLang = currentLang === 'en' ? 'ta' : 'en';
-      document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', currentLang === 'ta'));
-      document.querySelectorAll('.lang-ta').forEach(el => el.classList.toggle('hidden', currentLang === 'en'));
-      document.getElementById('langToggleBtn').textContent = currentLang === 'en' ? 'தமிழ் / EN' : 'EN / தமிழ்';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      try {
+        localStorage.setItem('st_isabel_lang', lang);
+      } catch (err) {}
+
+      const dict = I18N_DICT[lang] || I18N_DICT.en;
+
+      // Update all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.textContent = dict[key];
+        }
+      });
+
+      // Update toggle button text
+      const toggleBtn = document.getElementById('langToggleBtn');
+      if (toggleBtn) {
+        toggleBtn.textContent = dict.langToggleBtn;
+      }
+
+      // Update mobile drawer language text
+      document.querySelectorAll('.mobileLangBtnText').forEach(el => {
+        el.textContent = dict.mobileLang;
+      });
+
+      // Toggle specialized .lang-en and .lang-ta visibility classes
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', lang === 'ta'));
+      document.querySelectorAll('.lang-ta').forEach(el => el.classList.toggle('hidden', lang === 'en'));
     }
+
+    function toggleLanguage() {
+      const nextLang = currentLang === 'en' ? 'ta' : 'en';
+      setLanguage(nextLang);
+    }
+
+    // Auto-load saved language
+    try {
+      const savedLang = localStorage.getItem('st_isabel_lang');
+      if (savedLang && (savedLang === 'ta' || savedLang === 'en')) {
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', () => setLanguage(savedLang));
+        } else {
+          setLanguage(savedLang);
+        }
+      }
+    } catch(e) {}
 
     // ================= GALLERY RENDERING & LIGHTBOX =================
     let currentLightboxIndex = 0;
@@ -2189,15 +2424,58 @@
       openLightboxByIndex(currentLightboxIndex);
     }
 
-    // Keyboard navigation for Lightbox
+    // Keyboard navigation for Modals & Lightbox
     window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeApplyModal();
+        closeMarksModal();
+        closeNoticeModal();
+        closeLightbox();
+      }
       const modal = document.getElementById('lightboxModal');
       if (modal && !modal.classList.contains('hidden')) {
-        if (e.key === 'Escape') closeLightbox();
         if (e.key === 'ArrowRight') navigateLightbox(1);
         if (e.key === 'ArrowLeft') navigateLightbox(-1);
       }
     });
+
+    // ================= ADMISSION APPLY POPUP MODAL =================
+    function openApplyModal() {
+      const modal = document.getElementById('applyModal');
+      if (!modal) return;
+      document.getElementById('applyPopupForm').classList.remove('hidden');
+      document.getElementById('applyPopupSuccess').classList.add('hidden');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        const input = document.getElementById('popupStudentName');
+        if (input) input.focus();
+      }, 80);
+    }
+
+    function closeApplyModal() {
+      const modal = document.getElementById('applyModal');
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function handleApplyModalBackdrop(e) {
+      if (e.target.id === 'applyModal') {
+        closeApplyModal();
+      }
+    }
+
+    function handleApplyPopupSubmit(e) {
+      e.preventDefault();
+      const randNum = Math.floor(1000 + Math.random() * 9000);
+      const appToken = `STIS-2025-${randNum}`;
+      document.getElementById('popupAppToken').textContent = appToken;
+      document.getElementById('applyPopupForm').classList.add('hidden');
+      document.getElementById('applyPopupSuccess').classList.remove('hidden');
+    }
 
     // ================= MARKSHEET / RESULT DISPLAY =================
     function displayMarksRecord(key) {
