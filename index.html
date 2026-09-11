@@ -105,50 +105,51 @@
 
   <!-- ================= TOP TICKER / QUICK BAR ================= -->
   <header class="fixed top-0 left-0 w-full z-50 shadow-md">
-    <!-- Top Micro Bar -->
-    <div class="bg-brand-maroondark text-brand-cream py-1 px-4 text-xs">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-1">
-        <div class="flex flex-wrap items-center justify-center gap-3">
+    <!-- Top Micro Bar: Sleek single line, never wraps -->
+    <div class="bg-brand-maroondark text-brand-cream py-1 px-3 sm:px-6 text-[11px] border-b border-brand-maroonlight/30">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-2">
+        <!-- Phone Link -->
+        <a href="tel:04373252177" class="flex items-center gap-1 text-brand-gold hover:text-brand-goldlight transition-colors font-medium">
+          <span class="material-symbols-outlined text-[13px]">call</span>
+          <span>04373 – 252177</span>
+        </a>
+
+        <!-- Desktop Location & Instagram -->
+        <div class="hidden md:flex items-center gap-3 text-gray-300 text-xs">
           <span class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-[14px] text-brand-gold">call</span>
-            <span>04373 – 252177</span>
+            <span class="material-symbols-outlined text-[13px] text-brand-gold">location_on</span>
+            <span>Matha Kovil St, Pattukkottai (UDISE: 33211204722)</span>
           </span>
-          <span class="text-brand-gold hidden sm:inline">•</span>
-          <span class="flex items-center gap-1">
-            <span class="material-symbols-outlined text-[14px] text-brand-gold">location_on</span>
-            <span>Matha Kovil St, Pattukkottai – 614601 (UDISE: 33211204722)</span>
-          </span>
-          <span class="text-brand-gold hidden sm:inline">•</span>
+          <span class="text-brand-gold/60">•</span>
           <a href="https://instagram.com/st.isabelgirlshrsec" target="_blank" rel="noopener" class="flex items-center gap-1 text-brand-gold hover:underline">
-            <span class="material-symbols-outlined text-[14px]">photo_camera</span>
+            <span class="material-symbols-outlined text-[13px]">photo_camera</span>
             <span>@st.isabelgirlshrsec (2,714+ Followers)</span>
           </a>
         </div>
-        
-        <div class="flex items-center gap-3">
-          <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2 py-0.5 rounded bg-brand-maroonlight text-brand-gold text-[11px] font-bold tracking-wider hover:bg-brand-gold hover:text-brand-maroondark transition-colors">
-            தமிழ் / EN
-          </button>
-        </div>
+
+        <!-- Language Switcher Pill -->
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2.5 py-0.5 rounded-full bg-brand-gold/15 hover:bg-brand-gold hover:text-brand-maroondark text-brand-gold text-[10px] sm:text-[11px] font-bold tracking-wider border border-brand-gold/30 transition-all cursor-pointer">
+          தமிழ் / EN
+        </button>
       </div>
     </div>
 
     <!-- Main Navigation Bar -->
-    <div class="bg-white/95 backdrop-blur-md border-b border-brand-warmgray">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+    <div class="bg-white/95 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-14 sm:h-16 md:h-20 flex items-center justify-between gap-2 sm:gap-4">
         
         <!-- Logo & School Title -->
-        <a href="#home" class="flex items-center gap-3 group">
-          <img src="images/logo.jpg" alt="St. Isabel's Girls Higher Secondary School Crest" class="h-14 w-14 object-contain rounded-full p-1 bg-white shadow-sm border border-brand-gold/30 group-hover:scale-105 transition-transform"/>
-          <div class="flex flex-col">
-            <span class="font-serif font-bold text-lg sm:text-xl text-brand-maroon leading-tight tracking-tight lang-en">
+        <a href="#home" class="flex items-center gap-2 sm:gap-3 group min-w-0">
+          <img src="images/logo.jpg" alt="St. Isabel's Girls Higher Secondary School Crest" class="h-9 w-9 sm:h-11 sm:w-11 md:h-14 md:w-14 shrink-0 object-contain rounded-full p-0.5 sm:p-1 bg-white shadow-sm border border-brand-gold/30 group-hover:scale-105 transition-transform"/>
+          <div class="flex flex-col min-w-0">
+            <span class="font-serif font-bold text-xs sm:text-base md:text-xl text-brand-maroon leading-tight tracking-tight lang-en truncate">
               ST. ISABEL'S GIRLS HR. SEC. SCHOOL
             </span>
-            <span class="font-tamil font-bold text-base sm:text-lg text-brand-maroon leading-tight tracking-tight lang-ta hidden">
+            <span class="font-tamil font-bold text-xs sm:text-base md:text-lg text-brand-maroon leading-tight tracking-tight lang-ta hidden truncate">
               புனித இசபெல்லா பெண்கள் மேல்நிலைப் பள்ளி
             </span>
-            <span class="text-[11px] font-semibold tracking-wider text-brand-golddark uppercase">
-              Pattukkottai • Estd. 1981 • Bon Secours Congregation
+            <span class="text-[9px] sm:text-[10px] md:text-[11px] font-semibold tracking-wider text-brand-golddark uppercase truncate">
+              Pattukkottai • Estd. 1981 • Bon Secours
             </span>
           </div>
         </a>
@@ -165,10 +166,10 @@
           <a href="#contact" class="nav-link hover:text-brand-maroon transition-colors py-1">Contact</a>
         </nav>
 
-        <!-- CTA Buttons -->
-        <div class="flex items-center gap-2">
-          <a href="#admissions" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-maroon hover:bg-brand-maroondark text-white text-xs sm:text-sm font-semibold shadow transition-all hover:shadow-lg">
-            <span class="material-symbols-outlined text-[18px] text-brand-gold">how_to_reg</span>
+        <!-- CTA & Menu Buttons -->
+        <div class="flex items-center gap-1.5 sm:gap-2 shrink-0">
+          <a href="#admissions" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-lg bg-brand-maroon hover:bg-brand-maroondark text-white text-xs sm:text-sm font-semibold shadow transition-all hover:shadow-md">
+            <span class="material-symbols-outlined text-[16px] sm:text-[18px] text-brand-gold">how_to_reg</span>
             <span>Apply Now</span>
           </a>
           <button onclick="openMarksModal()" class="hidden md:inline-flex items-center gap-1 px-3 py-2 rounded-lg bg-brand-warmgray hover:bg-brand-gold/20 text-brand-maroon text-xs font-semibold border border-brand-gold/30 transition-colors" title="Check Sample Board Results">
@@ -176,16 +177,24 @@
             <span>Roll of Honour</span>
           </button>
 
+          <!-- Mobile Quick Apply button -->
+          <a href="#admissions" class="sm:hidden px-2.5 py-1 rounded-md bg-brand-maroon text-brand-gold text-[11px] font-bold shadow-sm">
+            Apply
+          </a>
+
           <!-- Mobile Hamburger Toggle -->
-          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-brand-maroon hover:bg-brand-warmgray focus:outline-none" aria-label="Toggle Navigation">
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-1.5 sm:p-2 rounded-lg text-brand-maroon hover:bg-brand-warmgray focus:outline-none" aria-label="Toggle Navigation">
             <span class="material-symbols-outlined text-2xl">menu</span>
           </button>
         </div>
       </div>
+      
+      <!-- Unique Royal Golden Accent Ribbon -->
+      <div class="h-[2px] w-full bg-gradient-to-r from-brand-maroondark via-brand-gold to-brand-maroondark opacity-85"></div>
     </div>
 
     <!-- Mobile Drawer Navigation -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-brand-maroondark text-white border-b border-brand-maroonlight px-6 py-4 space-y-3">
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-maroondark text-white border-b border-brand-maroonlight px-5 py-4 space-y-3 shadow-xl">
       <div class="grid grid-cols-2 gap-2 text-sm">
         <a href="#home" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Home</a>
         <a href="#about" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">About Us</a>
@@ -196,11 +205,11 @@
         <a href="#news-and-events" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">News & Events</a>
         <a href="#contact" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Contact Us</a>
       </div>
-      <div class="pt-2 border-t border-brand-maroonlight flex flex-col gap-2">
+      <div class="pt-2 border-t border-brand-maroonlight/60 flex flex-col gap-2">
         <a href="#admissions" onclick="closeMobileMenu()" class="w-full py-2.5 rounded bg-brand-gold text-brand-maroondark text-center font-bold text-sm">
           Admissions 2025–26 Enquire
         </a>
-        <button onclick="closeMobileMenu(); openMarksModal();" class="w-full py-2 rounded bg-brand-maroon text-brand-cream text-center text-xs font-semibold">
+        <button onclick="closeMobileMenu(); openMarksModal();" class="w-full py-2 rounded bg-brand-maroon text-brand-cream text-center text-xs font-semibold border border-brand-gold/30">
           Check Board Exam Hall of Fame
         </button>
       </div>
@@ -208,7 +217,7 @@
   </header>
 
   <!-- ================= MAIN ROUTED CONTENT CONTAINER ================= -->
-  <main class="flex-1 pt-28">
+  <main class="flex-1 pt-[82px] sm:pt-[94px] md:pt-[108px]">
 
     <!-- ================= VIEW 1: HOME ================= -->
     <section id="view-home" class="view-section active">
