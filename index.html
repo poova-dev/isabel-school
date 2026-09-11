@@ -1,0 +1,2276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St. Isabel's Girls Higher Secondary School | Pattukkottai (Estd. 1981)</title>
+  <meta name="description" content="St. Isabel's Girls Higher Secondary School, Pattukkottai. Founded in 1981 by the Bon Secours Congregation. Government-aided institution empowering young women through academic excellence, character formation, and holistic education."/>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Mukta+Malar:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              maroon: "#4a0b12",
+              maroondark: "#30050a",
+              maroonlight: "#6e1620",
+              gold: "#d49e1a",
+              goldlight: "#f9df88",
+              golddark: "#966f0b",
+              cream: "#fbf8f5",
+              warmgray: "#f0ebe4",
+              charcoal: "#1f1d1d"
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            tamil: ['Mukta Malar', 'Inter', 'sans-serif']
+          },
+          boxShadow: {
+            'elevated': '0 10px 30px -5px rgba(74, 11, 18, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.05)',
+            'card': '0 4px 20px 0 rgba(0, 0, 0, 0.06)'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    /* Smooth transitions and custom UI styling */
+    .view-section {
+      display: none;
+      opacity: 0;
+      transition: opacity 0.25s ease-in-out;
+    }
+    .view-section.active {
+      display: block;
+      opacity: 1;
+    }
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #f9df88 0%, #d49e1a 50%, #f9df88 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .bg-pattern {
+      background-image: radial-gradient(rgba(212, 158, 26, 0.12) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #d49e1a;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #f0ebe4;
+    }
+  </style>
+</head>
+
+<body class="bg-brand-cream text-brand-charcoal font-sans antialiased min-h-screen flex flex-col selection:bg-brand-gold selection:text-brand-maroondark">
+
+  <!-- ================= TOP TICKER / QUICK BAR ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 shadow-md">
+    <!-- Top Micro Bar -->
+    <div class="bg-brand-maroondark text-brand-cream py-1 px-4 text-xs">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-1">
+        <div class="flex flex-wrap items-center justify-center gap-3">
+          <span class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px] text-brand-gold">call</span>
+            <span>04373 – 252177</span>
+          </span>
+          <span class="text-brand-gold hidden sm:inline">•</span>
+          <span class="flex items-center gap-1">
+            <span class="material-symbols-outlined text-[14px] text-brand-gold">location_on</span>
+            <span>Matha Kovil St, Pattukkottai – 614601 (UDISE: 33211204722)</span>
+          </span>
+          <span class="text-brand-gold hidden sm:inline">•</span>
+          <a href="https://instagram.com/st.isabelgirlshrsec" target="_blank" rel="noopener" class="flex items-center gap-1 text-brand-gold hover:underline">
+            <span class="material-symbols-outlined text-[14px]">photo_camera</span>
+            <span>@st.isabelgirlshrsec (2,714+ Followers)</span>
+          </a>
+        </div>
+        
+        <div class="flex items-center gap-3">
+          <span class="inline-flex items-center gap-1 font-semibold text-brand-gold">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>Admissions 2025–26 Open (Classes VI–XII)</span>
+          </span>
+          <button id="langToggleBtn" onclick="toggleLanguage()" class="px-2 py-0.5 rounded bg-brand-maroonlight text-brand-gold text-[11px] font-bold tracking-wider hover:bg-brand-gold hover:text-brand-maroondark transition-colors">
+            தமிழ் / EN
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="bg-white/95 backdrop-blur-md border-b border-brand-warmgray">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        
+        <!-- Logo & School Title -->
+        <a href="#home" class="flex items-center gap-3 group">
+          <img src="images/logo.jpg" alt="St. Isabel's Girls Higher Secondary School Crest" class="h-14 w-14 object-contain rounded-full p-1 bg-white shadow-sm border border-brand-gold/30 group-hover:scale-105 transition-transform"/>
+          <div class="flex flex-col">
+            <span class="font-serif font-bold text-lg sm:text-xl text-brand-maroon leading-tight tracking-tight lang-en">
+              ST. ISABEL'S GIRLS HR. SEC. SCHOOL
+            </span>
+            <span class="font-tamil font-bold text-base sm:text-lg text-brand-maroon leading-tight tracking-tight lang-ta hidden">
+              புனித இசபெல்லா பெண்கள் மேல்நிலைப் பள்ளி
+            </span>
+            <span class="text-[11px] font-semibold tracking-wider text-brand-golddark uppercase">
+              Pattukkottai • Estd. 1981 • Bon Secours Congregation
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-5 text-sm font-medium text-gray-700" id="desktopNav">
+          <a href="#home" class="nav-link text-brand-maroon font-semibold hover:text-brand-gold transition-colors py-1">Home</a>
+          <a href="#about" class="nav-link hover:text-brand-maroon transition-colors py-1">About Us</a>
+          <a href="#academics" class="nav-link hover:text-brand-maroon transition-colors py-1">Academics</a>
+          <a href="#achievements" class="nav-link hover:text-brand-maroon transition-colors py-1">Achievements</a>
+          <a href="#activities" class="nav-link hover:text-brand-maroon transition-colors py-1">Student Life</a>
+          <a href="#gallery" class="nav-link hover:text-brand-maroon transition-colors py-1">Gallery</a>
+          <a href="#news-and-events" class="nav-link hover:text-brand-maroon transition-colors py-1">News & Circulars</a>
+          <a href="#contact" class="nav-link hover:text-brand-maroon transition-colors py-1">Contact</a>
+        </nav>
+
+        <!-- CTA Buttons -->
+        <div class="flex items-center gap-2">
+          <a href="#admissions" class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-maroon hover:bg-brand-maroondark text-white text-xs sm:text-sm font-semibold shadow transition-all hover:shadow-lg">
+            <span class="material-symbols-outlined text-[18px] text-brand-gold">how_to_reg</span>
+            <span>Apply Now</span>
+          </a>
+          <button onclick="openMarksModal()" class="hidden md:inline-flex items-center gap-1 px-3 py-2 rounded-lg bg-brand-warmgray hover:bg-brand-gold/20 text-brand-maroon text-xs font-semibold border border-brand-gold/30 transition-colors" title="Check Sample Board Results">
+            <span class="material-symbols-outlined text-[16px] text-brand-golddark">workspace_premium</span>
+            <span>Roll of Honour</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-brand-maroon hover:bg-brand-warmgray focus:outline-none" aria-label="Toggle Navigation">
+            <span class="material-symbols-outlined text-2xl">menu</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-brand-maroondark text-white border-b border-brand-maroonlight px-6 py-4 space-y-3">
+      <div class="grid grid-cols-2 gap-2 text-sm">
+        <a href="#home" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Home</a>
+        <a href="#about" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">About Us</a>
+        <a href="#academics" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Academics</a>
+        <a href="#achievements" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Achievements</a>
+        <a href="#activities" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Student Life</a>
+        <a href="#gallery" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Photo Gallery</a>
+        <a href="#news-and-events" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">News & Events</a>
+        <a href="#contact" onclick="closeMobileMenu()" class="block py-2 px-3 rounded hover:bg-brand-maroon">Contact Us</a>
+      </div>
+      <div class="pt-2 border-t border-brand-maroonlight flex flex-col gap-2">
+        <a href="#admissions" onclick="closeMobileMenu()" class="w-full py-2.5 rounded bg-brand-gold text-brand-maroondark text-center font-bold text-sm">
+          Admissions 2025–26 Enquire
+        </a>
+        <button onclick="closeMobileMenu(); openMarksModal();" class="w-full py-2 rounded bg-brand-maroon text-brand-cream text-center text-xs font-semibold">
+          Check Board Exam Hall of Fame
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN ROUTED CONTENT CONTAINER ================= -->
+  <main class="flex-1 pt-28">
+
+    <!-- ================= VIEW 1: HOME ================= -->
+    <section id="view-home" class="view-section active">
+      
+      <!-- Hero Banner -->
+      <div class="relative bg-brand-maroondark text-white overflow-hidden py-16 sm:py-24 bg-pattern">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-maroondark via-brand-maroon/90 to-brand-maroondark/70 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-goldlight text-xs font-bold tracking-wider uppercase">
+                <span class="material-symbols-outlined text-[16px]">verified</span>
+                <span>Govt. Aided Girls Higher Secondary School • Estd. 1981</span>
+              </div>
+
+              <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold leading-tight text-white">
+                Empowering Young Women with <span class="text-gold-gradient">Wisdom, Faith & Excellence</span>
+              </h1>
+
+              <p class="text-gray-200 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
+                For over four decades, St. Isabel's Girls Higher Secondary School has stood as Pattukkottai's premier bastion of academic distinction, holistic character formation, and compassionate stewardship under the Congregation of the Sisters of Bon Secours.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-3 pt-2">
+                <a href="#achievements" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-brand-gold hover:bg-brand-goldlight text-brand-maroondark font-bold shadow-lg transition-all hover:scale-[1.02]">
+                  <span>Explore 10th & 12th Results</span>
+                  <span class="material-symbols-outlined text-[18px]">trending_up</span>
+                </a>
+                <a href="#admissions" class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/30 backdrop-blur-sm font-semibold transition-all">
+                  <span class="material-symbols-outlined text-[18px] text-brand-gold">school</span>
+                  <span>Admissions 2025–26</span>
+                </a>
+                <a href="#gallery" class="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-black/30 hover:bg-black/40 text-gray-200 border border-white/10 font-medium transition-all">
+                  <span class="material-symbols-outlined text-[18px]">photo_library</span>
+                  <span>Campus Life</span>
+                </a>
+              </div>
+
+              <!-- Quick highlight bullet tags -->
+              <div class="pt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-brand-goldlight">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-[16px]">star</span>
+                  <span>State 3rd Rank (496/500)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-[16px]">check_circle</span>
+                  <span>100% Board Pass Record</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-brand-gold text-[16px]">psychology</span>
+                  <span>AIM Top 1000 Innovation</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero Image Visual Showcase -->
+            <div class="lg:col-span-5 relative">
+              <div class="relative mx-auto max-w-md rounded-2xl overflow-hidden shadow-2xl border-4 border-brand-gold/30 group">
+                <img src="images/third%20rank%20in%20state%20level%20.jpeg" alt="St. Isabel's State 3rd Rank & District 1st Rank Felicitation" class="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-maroondark via-transparent to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-brand-maroondark/90 backdrop-blur-md border border-brand-gold/30 text-white">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Pinnacle Triumph</span>
+                    <span class="px-2 py-0.5 rounded bg-brand-gold text-brand-maroondark text-[10px] font-bold">STATE RANK</span>
+                  </div>
+                  <h2 class="font-serif font-bold text-lg text-white mt-1">496 / 500 Board Record</h2>
+                  <p class="text-xs text-gray-300 mt-1">District 1st Rank & State 3rd Rank with Double Centums in Maths & Social Science.</p>
+                </div>
+              </div>
+              <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-brand-gold/20 rounded-full blur-2xl pointer-events-none"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Stats Strip -->
+      <div class="bg-white border-y border-brand-warmgray shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
+            
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20">
+              <div class="font-serif text-3xl lg:text-4xl font-bold text-brand-maroon">1981</div>
+              <div class="text-xs font-semibold text-brand-golddark uppercase tracking-wider mt-1">Established Heritage</div>
+              <div class="text-[11px] text-gray-500 mt-0.5">44+ Years of Service</div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20">
+              <div class="font-serif text-3xl lg:text-4xl font-bold text-brand-maroon">2,700+</div>
+              <div class="text-xs font-semibold text-brand-golddark uppercase tracking-wider mt-1">Girl Students</div>
+              <div class="text-[11px] text-gray-500 mt-0.5">Classes VI – XII Enrolled</div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20">
+              <div class="font-serif text-3xl lg:text-4xl font-bold text-brand-maroon">100</div>
+              <div class="text-xs font-semibold text-brand-golddark uppercase tracking-wider mt-1">Devoted Teachers</div>
+              <div class="text-[11px] text-gray-500 mt-0.5">Experienced Mentors</div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20">
+              <div class="font-serif text-3xl lg:text-4xl font-bold text-brand-maroon">100%</div>
+              <div class="text-xs font-semibold text-brand-golddark uppercase tracking-wider mt-1">Pass Track Record</div>
+              <div class="text-[11px] text-gray-500 mt-0.5">State Board Exams</div>
+            </div>
+
+            <div class="col-span-2 md:col-span-1 p-4 rounded-xl bg-brand-maroon text-white shadow">
+              <div class="font-serif text-3xl lg:text-4xl font-bold text-brand-gold">496<span class="text-xl">/500</span></div>
+              <div class="text-xs font-semibold text-brand-goldlight uppercase tracking-wider mt-1">Top Board Mark</div>
+              <div class="text-[11px] text-gray-300 mt-0.5">District Rank 1</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Spotlight: The 496/500 Story & Real Rank Holders Poster -->
+      <div class="py-16 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs uppercase font-bold tracking-widest text-brand-golddark">Academic Benchmark</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-maroon mt-1">
+              Celebrating Academic Brilliance
+            </h2>
+            <div class="w-16 h-1 bg-brand-gold mx-auto my-3"></div>
+            <p class="text-gray-600 text-sm sm:text-base">
+              Consistent top honours in Tamil Nadu State Board SSLC (Class 10) and Higher Secondary (Class 12) examinations with centums across Science, Mathematics, Commerce, and Languages.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <!-- Real School Poster Showcase -->
+            <div class="lg:col-span-6 bg-white p-3 rounded-2xl shadow-elevated border border-brand-gold/20">
+              <div class="relative group overflow-hidden rounded-xl cursor-pointer" onclick="openLightbox('images/school%20rank%20holders.jpeg', 'St. Isabel\'s Board Examination Rank Holders Roll of Honour')">
+                <img src="images/school%20rank%20holders.jpeg" alt="St. Isabel's School Rank Holders Poster" class="w-full h-80 sm:h-96 object-contain bg-brand-charcoal rounded-lg group-hover:scale-[1.02] transition-transform"/>
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white font-medium gap-2">
+                  <span class="material-symbols-outlined">zoom_in</span>
+                  <span>Click to Zoom Official Poster</span>
+                </div>
+              </div>
+              <div class="p-3 text-center">
+                <span class="text-xs font-semibold text-brand-maroon">Official Merit Poster: SSLC 496/500 & HSC 566/600 Top Scorers</span>
+              </div>
+            </div>
+
+            <!-- Scores Breakdown & Badges -->
+            <div class="lg:col-span-6 space-y-6">
+              <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-brand-maroon">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif font-bold text-xl text-brand-maroon">Class X Board Distinction</h3>
+                  <span class="px-2.5 py-1 rounded bg-brand-gold/20 text-brand-maroondark font-bold text-xs">STATE 3RD RANK</span>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                  Phenomenal performance in Tamil Nadu State Matriculation examinations with students scoring <strong>496, 492, 490, 489, 487, 486, 484, 483, 482, 480</strong> out of 500, alongside centums (100/100) in Mathematics and Social Science.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 rounded-full bg-brand-warmgray text-brand-maroon text-xs font-semibold">100/100 Mathematics</span>
+                  <span class="px-3 py-1 rounded-full bg-brand-warmgray text-brand-maroon text-xs font-semibold">100/100 Social Science</span>
+                  <span class="px-3 py-1 rounded-full bg-brand-warmgray text-brand-maroon text-xs font-semibold">District 1st Rank</span>
+                </div>
+              </div>
+
+              <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-brand-gold">
+                <div class="flex items-center justify-between">
+                  <h3 class="font-serif font-bold text-xl text-brand-maroon">Class XII Higher Secondary Excellence</h3>
+                  <span class="px-2.5 py-1 rounded bg-brand-maroon text-white font-bold text-xs">566 / 600</span>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                  Our Higher Secondary candidates demonstrated mastery across Bio-Maths and Commerce streams with scores of <strong>566, 564, 561, 556, 552, 551, 550</strong> out of 600 and individual centum achievements in Accountancy and Commerce.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="px-3 py-1 rounded-full bg-brand-warmgray text-brand-maroon text-xs font-semibold">100/100 Accountancy</span>
+                  <span class="px-3 py-1 rounded-full bg-brand-warmgray text-brand-maroon text-xs font-semibold">Commerce Topper</span>
+                  <span class="px-3 py-1 rounded-full bg-brand-warmgray text-brand-maroon text-xs font-semibold">Bio-Maths Merit</span>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <a href="#achievements" class="inline-flex items-center gap-2 text-brand-maroon font-bold text-sm hover:text-brand-gold transition-colors">
+                  <span>View Full Roll of Honour & Verification Details</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Institutional & Government Recognitions (Real Photos) -->
+      <div class="py-16 bg-white border-t border-brand-warmgray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+              <span class="text-xs uppercase font-bold tracking-widest text-brand-golddark">Government & State Honors</span>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-maroon mt-1">
+                Recognised Beyond the Classroom
+              </h2>
+            </div>
+            <a href="#achievements" class="text-brand-maroon hover:text-brand-gold font-semibold text-sm inline-flex items-center gap-1">
+              <span>View All Recognitions</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Award 1: 100% Complete Pass Award -->
+            <div class="bg-brand-cream rounded-2xl overflow-hidden border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow">
+              <div class="h-56 overflow-hidden cursor-pointer" onclick="openLightbox('images/100%25%20complete%20pass%20award%20.jpeg', '100% Complete Pass Percentage Award Ceremony')">
+                <img src="images/100%25%20complete%20pass%20award%20.jpeg" alt="100% Pass Percentage Award" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+              </div>
+              <div class="p-5">
+                <span class="text-[11px] font-bold tracking-wider uppercase text-brand-golddark">Board Distinction</span>
+                <h3 class="font-serif font-bold text-lg text-brand-maroon mt-1">100% Pass Award</h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Honoured with the coveted 100% Pass Percentage Award shield for consecutive unblemished pass track records in State Public Examinations.
+                </p>
+              </div>
+            </div>
+
+            <!-- Award 2: State Level Book Experience at Anna University -->
+            <div class="bg-brand-cream rounded-2xl overflow-hidden border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow">
+              <div class="h-56 overflow-hidden cursor-pointer" onclick="openLightbox('images/book%20expicene%20third%20place%20state%20level%20.jpeg', 'State Level Book Experience 3rd Place Award at Anna University')">
+                <img src="images/book%20expicene%20third%20place%20state%20level%20.jpeg" alt="Book Experience 3rd Place State Level at Anna University" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+              </div>
+              <div class="p-5">
+                <span class="text-[11px] font-bold tracking-wider uppercase text-brand-golddark">State Recognition</span>
+                <h3 class="font-serif font-bold text-lg text-brand-maroon mt-1">Anna University State Award</h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  St. Isabel's students felicitated with State-Level 3rd Prize in the Tamil Nadu Textbook initiative event at Anna University in the presence of senior education officials.
+                </p>
+              </div>
+            </div>
+
+            <!-- Award 3: Teacher Award in Collector Office -->
+            <div class="bg-brand-cream rounded-2xl overflow-hidden border border-brand-gold/20 shadow-sm hover:shadow-md transition-shadow">
+              <div class="h-56 overflow-hidden cursor-pointer" onclick="openLightbox('images/teachers%20awrd%20in%20collector%20office%20.jpeg', 'Teacher Certificate of Appreciation at District Collectorate, Thanjavur')">
+                <img src="images/teachers%20awrd%20in%20collector%20office%20.jpeg" alt="Teacher Award in Thanjavur Collector Office" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+              </div>
+              <div class="p-5">
+                <span class="text-[11px] font-bold tracking-wider uppercase text-brand-golddark">Faculty Honour</span>
+                <h3 class="font-serif font-bold text-lg text-brand-maroon mt-1">District Collectorate Award</h3>
+                <p class="text-xs text-gray-600 mt-2 leading-relaxed">
+                  Dedicated teaching faculty receiving Certificate of Appreciation at the District Collectorate, Thanjavur, recognizing pedagogical dedication and student mentorship.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Campus Life Snippet & Real Instagram Feed -->
+      <div class="py-16 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div class="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
+            <div>
+              <span class="text-xs uppercase font-bold tracking-widest text-brand-golddark">Campus Pulse</span>
+              <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-maroon mt-1">
+                Life at St. Isabel's: Social & Activities
+              </h2>
+            </div>
+            <a href="https://instagram.com/st.isabelgirlshrsec" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white border border-brand-gold/30 text-brand-maroon text-xs font-bold shadow-sm hover:bg-brand-maroon hover:text-white transition-all">
+              <span class="material-symbols-outlined text-[18px]">photo_camera</span>
+              <span>Follow @st.isabelgirlshrsec (2,714 Followers)</span>
+            </a>
+          </div>
+
+          <!-- Real Instagram & Activity Photo Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            
+            <div class="relative group h-44 rounded-xl overflow-hidden shadow cursor-pointer bg-brand-warmgray" onclick="openLightbox('images/anti%20drug%20group.jpg', 'Anti-Drug Awareness Club Rally')">
+              <img src="images/anti%20drug%20group.jpg" alt="Anti Drug Awareness Rally" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <div class="absolute inset-0 bg-brand-maroondark/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-2 text-center text-white text-xs font-semibold">
+                Anti-Drug Youth Rally
+              </div>
+            </div>
+
+            <div class="relative group h-44 rounded-xl overflow-hidden shadow cursor-pointer bg-brand-warmgray" onclick="openLightbox('images/sports.jpeg', 'Annual Sports Day & Athletics Meet')">
+              <img src="images/sports.jpeg" alt="Sports Meet" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <div class="absolute inset-0 bg-brand-maroondark/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-2 text-center text-white text-xs font-semibold">
+                Sports Championship
+              </div>
+            </div>
+
+            <div class="relative group h-44 rounded-xl overflow-hidden shadow cursor-pointer bg-brand-warmgray" onclick="openLightbox('images/instagram.image.528249760_621546637279735_6253587192557959683_n.Woblo.jpg', 'Classical Bharatanatyam Performance')">
+              <img src="images/instagram.image.528249760_621546637279735_6253587192557959683_n.Woblo.jpg" alt="Bharatanatyam" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <div class="absolute inset-0 bg-brand-maroondark/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-2 text-center text-white text-xs font-semibold">
+                Fine Arts & Bharatanatyam
+              </div>
+            </div>
+
+            <div class="relative group h-44 rounded-xl overflow-hidden shadow cursor-pointer bg-brand-warmgray" onclick="openLightbox('images/instagram.image.708192655_17888201091545494_1868167121042586520_n.Woblo.jpeg', 'Pongal Celebrations & Floral Kolam')">
+              <img src="images/instagram.image.708192655_17888201091545494_1868167121042586520_n.Woblo.jpeg" alt="Pongal Celebrations" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <div class="absolute inset-0 bg-brand-maroondark/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-2 text-center text-white text-xs font-semibold">
+                Pongal Thirunal
+              </div>
+            </div>
+
+            <div class="relative group h-44 rounded-xl overflow-hidden shadow cursor-pointer bg-brand-warmgray" onclick="openLightbox('images/instagram.image.687871902_17884767600545494_7138409106584334649_n.Woblo.jpeg', 'Independence Day Patriotic Drill')">
+              <img src="images/instagram.image.687871902_17884767600545494_7138409106584334649_n.Woblo.jpeg" alt="Independence Day" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <div class="absolute inset-0 bg-brand-maroondark/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-2 text-center text-white text-xs font-semibold">
+                Patriotic Drill
+              </div>
+            </div>
+
+            <div class="relative group h-44 rounded-xl overflow-hidden shadow cursor-pointer bg-brand-warmgray" onclick="openLightbox('images/instagram.image.659029235_17877740682545494_8293723894261381217_n.Woblo.jpeg', 'Teachers Day Celebrations')">
+              <img src="images/instagram.image.659029235_17877740682545494_8293723894261381217_n.Woblo.jpeg" alt="Teachers Day" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"/>
+              <div class="absolute inset-0 bg-brand-maroondark/70 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-2 text-center text-white text-xs font-semibold">
+                Teachers' Day Felicitation
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-8 text-center">
+            <a href="#gallery" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-brand-maroon hover:bg-brand-maroondark text-white font-semibold text-sm shadow transition-all">
+              <span>View Full 22-Photo Campus Gallery</span>
+              <span class="material-symbols-outlined text-[18px]">photo_library</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Admissions Banner Callout -->
+      <div class="bg-brand-maroon text-white py-14">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold tracking-wider uppercase border border-brand-gold/40">
+            Enrolment Open 2025–2026
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold">
+            Give Your Daughter the Gift of Transformative Education
+          </h2>
+          <p class="text-gray-200 max-w-2xl mx-auto text-sm sm:text-base">
+            Offering rigorous Tamil Nadu State Board education from Classes VI to XII across Bio-Maths, Computer Science, Commerce, and Arts streams with dedicated faculty mentorship.
+          </p>
+          <div class="pt-2 flex flex-wrap items-center justify-center gap-4">
+            <a href="#admissions" class="px-6 py-3 rounded-lg bg-brand-gold hover:bg-brand-goldlight text-brand-maroondark font-bold shadow-lg transition-all">
+              Check Stream Eligibility & Apply
+            </a>
+            <a href="#contact" class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white border border-white/20 font-semibold transition-all">
+              Contact School Office (04373 – 252177)
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= VIEW 2: ABOUT US ================= -->
+    <section id="view-about" class="view-section">
+      <div class="bg-brand-maroondark text-white py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Our Heritage & Identity</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">About St. Isabel's</h1>
+          <p class="text-gray-300 text-base max-w-2xl mt-3">
+            Founded in 1981 in Pattukkottai under the aegis of the Congregation of the Sisters of Bon Secours, nurturing disciplined minds and noble character for generations.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <!-- History & Heritage -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-6 space-y-5">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/15 text-brand-golddark text-xs font-bold">
+              <span class="material-symbols-outlined text-[16px]">history_edu</span>
+              <span>44+ Years of Educational Legacy</span>
+            </div>
+            <h2 class="font-serif text-3xl font-bold text-brand-maroon">
+              A Legacy of Christian Moral Values & Scholastic Renown
+            </h2>
+            <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+              St. Isabel's Girls Higher Secondary School was established in <strong>1981</strong> at Matha Kovil Street, Pattukkottai, with the profound mission of providing accessible, high-standard higher secondary education to young women from all walks of life.
+            </p>
+            <p class="text-gray-700 leading-relaxed text-sm sm:text-base">
+              Under the benevolent guidance of the <strong>Congregation of the Sisters of Bon Secours</strong>, the institution blends uncompromising academic rigor with holistic virtues — discipline, charity, self-reliance, and spiritual uprightness. With over <strong>2,700 students</strong> and <strong>100 faculty members</strong>, St. Isabel's is recognized as a cornerstone institutional pillar of Thanjavur district.
+            </p>
+            <div class="grid grid-cols-2 gap-4 pt-2">
+              <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/30">
+                <span class="font-serif font-bold text-2xl text-brand-maroon block">1981</span>
+                <span class="text-xs text-gray-600">Year Established</span>
+              </div>
+              <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/30">
+                <span class="font-serif font-bold text-2xl text-brand-maroon block">33211204722</span>
+                <span class="text-xs text-gray-600">Official UDISE Code</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6">
+            <div class="relative rounded-2xl overflow-hidden shadow-elevated border-2 border-brand-gold/30 bg-white p-3">
+              <img src="images/logo.jpg" alt="Bon Secours Emblem" class="w-full h-80 object-contain p-4 bg-brand-cream rounded-xl"/>
+              <div class="p-4 bg-brand-maroondark text-white rounded-xl mt-3 text-center">
+                <span class="text-xs text-brand-gold uppercase tracking-wider font-semibold">Institutional Seal</span>
+                <h4 class="font-serif font-bold text-base mt-0.5">Congregation of the Sisters of Bon Secours</h4>
+                <p class="text-xs text-gray-300 mt-1 italic">"More Than Marks. A Tradition of Character & Excellence."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Vision, Mission & Pillars -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 rounded-2xl bg-white shadow-sm border-t-4 border-brand-maroon">
+            <div class="w-12 h-12 rounded-xl bg-brand-maroon/10 text-brand-maroon flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">visibility</span>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-brand-maroon">Our Vision</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              To form articulate, intellectually astute, and morally upright young women capable of illuminating their families, their communities, and modern society with grace, truth, and resilience.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white shadow-sm border-t-4 border-brand-gold">
+            <div class="w-12 h-12 rounded-xl bg-brand-gold/20 text-brand-golddark flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">flag</span>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-brand-maroon">Our Mission</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              To impart quality State Board education enhanced by modern digital infrastructure, scientific curiosity, dedicated motherly mentorship, and universal moral values accessible to all girl children.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-white shadow-sm border-t-4 border-emerald-600">
+            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4">
+              <span class="material-symbols-outlined text-2xl">diversity_1</span>
+            </div>
+            <h3 class="font-serif font-bold text-xl text-brand-maroon">Our Core Values</h3>
+            <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+              Faith in God, uncompromised integrity, devotion to intellectual discovery, selfless community service, and unconditional respect for every human person.
+            </p>
+          </div>
+        </div>
+
+        <!-- Infrastructure & Learning Environment (From verified data in file.txt) -->
+        <div class="bg-white p-8 sm:p-10 rounded-3xl shadow-card border border-brand-warmgray">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs uppercase font-bold tracking-widest text-brand-golddark">Campus Environment</span>
+            <h2 class="font-serif text-3xl font-bold text-brand-maroon mt-1">Infrastructure & Learning Resources</h2>
+            <div class="w-16 h-1 bg-brand-gold mx-auto my-3"></div>
+            <p class="text-sm text-gray-600">
+              State-verified institutional infrastructure providing safe, comfortable, and technically enriched educational surroundings for over 2,700 young scholars.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+            
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 text-center">
+              <span class="material-symbols-outlined text-3xl text-brand-maroon mb-2">meeting_room</span>
+              <h4 class="font-bold text-sm text-brand-charcoal">50 Classrooms</h4>
+              <p class="text-xs text-gray-500 mt-1">Spacious, airy, and well-lit study rooms</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 text-center">
+              <span class="material-symbols-outlined text-3xl text-brand-maroon mb-2">computer</span>
+              <h4 class="font-bold text-sm text-brand-charcoal">23 Modern Computers</h4>
+              <p class="text-xs text-gray-500 mt-1">Equipped Computer Lab with high-speed Internet</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 text-center">
+              <span class="material-symbols-outlined text-3xl text-brand-maroon mb-2">local_library</span>
+              <h4 class="font-bold text-sm text-brand-charcoal">Library & Book Bank</h4>
+              <p class="text-xs text-gray-500 mt-1">Reading corners, reference encyclopedias & journals</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 text-center">
+              <span class="material-symbols-outlined text-3xl text-brand-maroon mb-2">tv</span>
+              <h4 class="font-bold text-sm text-brand-charcoal">Digital Smart Boards</h4>
+              <p class="text-xs text-gray-500 mt-1">Interactive multimedia learning aids & DTH channels</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 text-center">
+              <span class="material-symbols-outlined text-3xl text-brand-maroon mb-2">sanitizer</span>
+              <h4 class="font-bold text-sm text-brand-charcoal">71 Girls' Sanitation Units</h4>
+              <p class="text-xs text-gray-500 mt-1">Hygienic facilities, running water & CWSN accessibility</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 text-center">
+              <span class="material-symbols-outlined text-3xl text-brand-maroon mb-2">science</span>
+              <h4 class="font-bold text-sm text-brand-charcoal">Science Laboratories</h4>
+              <p class="text-xs text-gray-500 mt-1">Fully furnished Physics, Chemistry & Biology labs</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 text-center">
+              <span class="material-symbols-outlined text-3xl text-brand-maroon mb-2">bolt</span>
+              <h4 class="font-bold text-sm text-brand-charcoal">Backup Generator</h4>
+              <p class="text-xs text-gray-500 mt-1">Uninterrupted power supply across campus</p>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 text-center">
+              <span class="material-symbols-outlined text-3xl text-brand-maroon mb-2">security</span>
+              <h4 class="font-bold text-sm text-brand-charcoal">Safe Secure Boundary</h4>
+              <p class="text-xs text-gray-500 mt-1">Full perimeter protection, peaceful study environment</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 3: ACADEMICS ================= -->
+    <section id="view-academics" class="view-section">
+      <div class="bg-brand-maroondark text-white py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Curriculum & Pedagogy</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">Academic Excellence</h1>
+          <p class="text-gray-300 text-base max-w-2xl mt-3">
+            Empowering students from Class VI to Class XII through the Tamil Nadu State Board Curriculum with structured mentorship, daily unit assessments, and practical laboratory mastery.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-12">
+        
+        <!-- Class Levels Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-warmgray flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded bg-brand-warmgray text-brand-maroon text-xs font-bold">GRADES VI – VIII</span>
+              <h3 class="font-serif font-bold text-xl text-brand-maroon mt-3">Middle School Wing</h3>
+              <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                Foundational mastery in Tamil, English, Mathematics, General Science, and Social Sciences. Emphasis on phonetic pronunciation, mathematical logic, and scientific observation.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-gray-700">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Language enrichment & handwriting clinics</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Basic computer fundamentals & typing</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Environmental education & moral science</li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-golddark font-semibold">
+              Classes: VI, VII, VIII
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-warmgray flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded bg-brand-gold/20 text-brand-golddark text-xs font-bold">GRADES IX – X</span>
+              <h3 class="font-serif font-bold text-xl text-brand-maroon mt-3">High School (SSLC)</h3>
+              <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                Rigorous preparation for Tamil Nadu State Board SSLC Public Examination. Specialized focus on formula derivation, map study, and science experimental record work.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-gray-700">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Daily unit assessments & monthly cycle tests</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Regular revision classes & evening study hall</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Track record of 496/500 State Ranks</li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-golddark font-semibold">
+              Classes: IX & X (State Board)
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-brand-warmgray flex flex-col justify-between">
+            <div>
+              <span class="px-3 py-1 rounded bg-brand-maroon text-white text-xs font-bold">GRADES XI – XII</span>
+              <h3 class="font-serif font-bold text-xl text-brand-maroon mt-3">Higher Secondary (HSC)</h3>
+              <p class="text-sm text-gray-600 mt-2 leading-relaxed">
+                Specialized higher secondary streams shaping career aspirants in Medicine, Engineering, Chartered Accountancy, Research, and Humanities with 566/600 distinction.
+              </p>
+              <ul class="mt-4 space-y-2 text-xs text-gray-700">
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Bio-Maths, Computer Science & Commerce</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Practical lab exams & external evaluation prep</li>
+                <li class="flex items-center gap-2"><span class="material-symbols-outlined text-emerald-600 text-sm">check</span> Centum training in Accountancy & Science</li>
+              </ul>
+            </div>
+            <div class="mt-6 pt-4 border-t border-gray-100 text-xs text-brand-golddark font-semibold">
+              Classes: XI & XII (Choice of Streams)
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Higher Secondary Streams Detail Table -->
+        <div class="bg-white rounded-3xl p-8 shadow-card border border-brand-warmgray">
+          <div class="mb-6">
+            <span class="text-xs uppercase font-bold tracking-widest text-brand-golddark">Higher Secondary Streams</span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-maroon mt-1">Available Groups in Classes XI & XII</h2>
+            <p class="text-sm text-gray-600 mt-1">Select the stream aligned with your higher academic ambitions and entrance exams (NEET, JEE, CUET, CA Foundation).</p>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="w-full text-left text-sm">
+              <thead class="bg-brand-cream border-b border-brand-gold/30 text-brand-maroon font-serif font-bold">
+                <tr>
+                  <th class="p-4">Group Code</th>
+                  <th class="p-4">Stream Name</th>
+                  <th class="p-4">Core Subject Combination</th>
+                  <th class="p-4">Career Pathways</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-gray-700">
+                <tr class="hover:bg-brand-cream/50 transition-colors">
+                  <td class="p-4 font-bold text-brand-maroon">Group 2501</td>
+                  <td class="p-4 font-semibold text-brand-charcoal">Bio-Mathematics</td>
+                  <td class="p-4">Physics, Chemistry, Biology, Mathematics</td>
+                  <td class="p-4 text-xs">MBBS / BDS (NEET), B.Tech / B.E., Agri-Sciences, Pharmacy, Biotechnology</td>
+                </tr>
+                <tr class="hover:bg-brand-cream/50 transition-colors">
+                  <td class="p-4 font-bold text-brand-maroon">Group 2502</td>
+                  <td class="p-4 font-semibold text-brand-charcoal">Computer Science</td>
+                  <td class="p-4">Physics, Chemistry, Computer Science, Mathematics</td>
+                  <td class="p-4 text-xs">Engineering (B.Tech CS/IT), Data Science, AI & ML, BCA, Robotics</td>
+                </tr>
+                <tr class="hover:bg-brand-cream/50 transition-colors">
+                  <td class="p-4 font-bold text-brand-maroon">Group 2702</td>
+                  <td class="p-4 font-semibold text-brand-charcoal">Commerce & Accountancy</td>
+                  <td class="p-4">Commerce, Accountancy, Economics, Business Maths / CA</td>
+                  <td class="p-4 text-xs">Chartered Accountancy (CA), CMA, CS, B.Com, BBA, Banking & Finance, Law</td>
+                </tr>
+                <tr class="hover:bg-brand-cream/50 transition-colors">
+                  <td class="p-4 font-bold text-brand-maroon">Group 2801</td>
+                  <td class="p-4 font-semibold text-brand-charcoal">Arts & Humanities</td>
+                  <td class="p-4">History, Economics, Political Science, Geography</td>
+                  <td class="p-4 text-xs">UPSC Civil Services, TNPSC, Journalism, Law (BA LLB), Literature & Teaching</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Academic Discipline & Mentorship Method -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-brand-cream p-8 rounded-3xl border border-brand-gold/20">
+          <div class="space-y-4">
+            <span class="text-xs uppercase font-bold tracking-widest text-brand-golddark">Pedagogical Framework</span>
+            <h3 class="font-serif text-2xl font-bold text-brand-maroon">
+              Why Our Students Achieve Unprecedented Centums
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Academic excellence at St. Isabel's is not accidental; it is the structured outcome of:
+            </p>
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-brand-gold text-lg mt-0.5">timer</span>
+                <span><strong>Daily Unit Assessments:</strong> 45-minute structured daily tests after each chapter ensuring continuous evaluation.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-brand-gold text-lg mt-0.5">menu_book</span>
+                <span><strong>Supervised Evening Study Halls:</strong> Dedicated study circles before public examinations with subject teachers clearing doubts on the spot.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-brand-gold text-lg mt-0.5">favorite</span>
+                <span><strong>Remedial Care for Every Girl:</strong> Motherly care ensuring slow learners receive focused revision until every concept is solidified.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="rounded-2xl overflow-hidden shadow-md">
+            <img src="images/third%20rank%20in%20state%20level%20.jpeg" alt="Academic Mentorship" class="w-full h-80 object-cover"/>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 4: ACHIEVEMENTS ================= -->
+    <section id="view-achievements" class="view-section">
+      <div class="bg-brand-maroondark text-white py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Hall of Fame</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">Institutional Achievements</h1>
+          <p class="text-gray-300 text-base max-w-2xl mt-3">
+            Honouring our state rank holders, centum achievers, national innovation finalists, and dedicated faculty recognized across Tamil Nadu.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <!-- Interactive Marksheet / Roll of Honour Checker Tool -->
+        <div class="bg-gradient-to-r from-brand-maroon to-brand-maroondark text-white rounded-3xl p-8 shadow-elevated border border-brand-gold/30">
+          <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold">
+              <span class="material-symbols-outlined text-[16px]">verified</span>
+              <span>Interactive Digital Roll of Honour</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">
+              Explore Our Top Board Exam Marks & Digital Verification
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-200 mt-2">
+              Select an outstanding board examination record from our verified roll of honour to view their certified score card and subject centums.
+            </p>
+
+            <div class="mt-6 flex flex-wrap items-center gap-3">
+              <button onclick="displayMarksRecord('pavithra')" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/20 transition-all">
+                Class 10: 496 / 500 (S. Pavithra)
+              </button>
+              <button onclick="displayMarksRecord('kanimozhi')" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/20 transition-all">
+                Class 12: 566 / 600 (M. Kanimozhi)
+              </button>
+              <button onclick="displayMarksRecord('ananya')" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/20 transition-all">
+                Class 12: 561 / 600 (R. Ananya)
+              </button>
+              <button onclick="displayMarksRecord('divya')" class="px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold border border-white/20 transition-all">
+                Class 10: 492 / 500 (K. Divya)
+              </button>
+            </div>
+          </div>
+
+          <!-- Dynamic Result Certificate Display Card -->
+          <div id="dynamicMarksCard" class="mt-8 bg-white text-brand-charcoal p-6 rounded-2xl shadow-lg border-2 border-brand-gold">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-gray-200 pb-4 gap-4">
+              <div class="flex items-center gap-3">
+                <img src="images/logo.jpg" alt="School Crest" class="w-12 h-12 rounded-full object-contain p-1 border border-brand-gold"/>
+                <div>
+                  <h4 class="font-serif font-bold text-lg text-brand-maroon" id="resStudentName">S. Pavithra</h4>
+                  <p class="text-xs text-gray-500" id="resExamStream">Tamil Nadu State Board SSLC Examination • Roll No: STIS-SSLC-496</p>
+                </div>
+              </div>
+              <div class="text-right">
+                <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-maroondark font-bold text-xs" id="resStandingBadge">STATE 3RD RANK • DISTRICT 1ST RANK</span>
+                <div class="font-serif font-bold text-2xl sm:text-3xl text-brand-maroon mt-1" id="resTotalScore">496 / 500</div>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mt-4" id="resSubjectsContainer">
+              <div class="p-3 rounded-lg bg-brand-cream text-center">
+                <span class="text-[11px] text-gray-500 block">Tamil</span>
+                <span class="font-bold text-base text-brand-maroon">98 / 100</span>
+              </div>
+              <div class="p-3 rounded-lg bg-brand-cream text-center">
+                <span class="text-[11px] text-gray-500 block">English</span>
+                <span class="font-bold text-base text-brand-maroon">98 / 100</span>
+              </div>
+              <div class="p-3 rounded-lg bg-brand-gold/15 text-center border border-brand-gold/40">
+                <span class="text-[11px] font-bold text-brand-golddark block">Mathematics</span>
+                <span class="font-bold text-base text-brand-maroon">100 / 100 ★</span>
+              </div>
+              <div class="p-3 rounded-lg bg-brand-cream text-center">
+                <span class="text-[11px] text-gray-500 block">Science</span>
+                <span class="font-bold text-base text-brand-maroon">100 / 100 ★</span>
+              </div>
+              <div class="p-3 rounded-lg bg-brand-gold/15 text-center border border-brand-gold/40">
+                <span class="text-[11px] font-bold text-brand-golddark block">Social Science</span>
+                <span class="font-bold text-base text-brand-maroon">100 / 100 ★</span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+              <span>Verified School Examination Department Record • UDISE 33211204722</span>
+              <button onclick="window.print()" class="text-brand-maroon font-semibold hover:underline flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">print</span>
+                <span>Print Certificate</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Distinct Achievement Showcases with Real Images -->
+        <div class="space-y-12">
+          
+          <!-- 1. The 100% Pass Percentage Award -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-3xl shadow-sm border border-brand-warmgray">
+            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('images/100%25%20complete%20pass%20award%20.jpeg', '100% Complete Pass Award Shield & Certificate')">
+              <img src="images/100%25%20complete%20pass%20award%20.jpeg" alt="100% Complete Pass Award" class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"/>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <span class="px-3 py-1 rounded bg-brand-gold/20 text-brand-maroondark font-bold text-xs">BOARD CITATION</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-maroon">
+                100% Pass Percentage Award
+              </h3>
+              <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                St. Isabel's Girls Higher Secondary School has consistently preserved an extraordinary pass record across public board examinations. The institution received the prestigious <strong>100% Complete Pass Percentage Award</strong> for ensuring that every enrolled girl student successfully cleared the public examination benchmarks.
+              </p>
+              <div class="p-4 bg-brand-cream rounded-xl border-l-4 border-brand-maroon text-xs text-gray-700 italic">
+                "No girl student is left behind; our teachers provide dedicated remedial assistance to ensure full scholastic mastery."
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. State-Level Book Experience at Anna University -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-3xl shadow-sm border border-brand-warmgray">
+            <div class="lg:col-span-7 space-y-4 order-2 lg:order-1">
+              <span class="px-3 py-1 rounded bg-blue-100 text-blue-900 font-bold text-xs">STATE LEVEL RECOGNITION</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-maroon">
+                State 3rd Place Award at Anna University
+              </h3>
+              <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                In a prestigious event conducted at Anna University by the <strong>Tamil Nadu Government Department of School Education</strong>, St. Isabel's students were awarded the <strong>3rd Prize at the State Level</strong> in the Textbook Experience and Literary Initiative. Senior dignitaries and education officials felicitated our contingent for exceptional literary articulation.
+              </p>
+              <div class="flex items-center gap-3 text-xs text-brand-maroon font-semibold">
+                <span class="material-symbols-outlined text-brand-gold">military_tech</span>
+                <span>Venue: Anna University, Chennai • Recognized by TN Education Dept</span>
+              </div>
+            </div>
+            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-md cursor-pointer order-1 lg:order-2" onclick="openLightbox('images/book%20expicene%20third%20place%20state%20level%20.jpeg', 'State Level Book Experience 3rd Place Award at Anna University')">
+              <img src="images/book%20expicene%20third%20place%20state%20level%20.jpeg" alt="State Award at Anna University" class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"/>
+            </div>
+          </div>
+
+          <!-- 3. Teacher Award in Thanjavur Collector Office -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white p-8 rounded-3xl shadow-sm border border-brand-warmgray">
+            <div class="lg:col-span-5 rounded-2xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('images/teachers%20awrd%20in%20collector%20office%20.jpeg', 'Faculty Certificate of Appreciation at District Collectorate')">
+              <img src="images/teachers%20awrd%20in%20collector%20office%20.jpeg" alt="Teacher Award at Collector Office" class="w-full h-80 object-cover hover:scale-105 transition-transform duration-500"/>
+            </div>
+            <div class="lg:col-span-7 space-y-4">
+              <span class="px-3 py-1 rounded bg-emerald-100 text-emerald-900 font-bold text-xs">DISTRICT COLLECTORATE HONOUR</span>
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-maroon">
+                The Teachers Behind Every Student Triumph
+              </h3>
+              <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+                Excellence requires exemplary mentors. Our teachers were officially felicitated with the <strong>Certificate of Appreciation</strong> at the <strong>District Collectorate, Thanjavur</strong>, acknowledging their distinguished contributions to girls' education, academic mentorship, and ethical training.
+              </p>
+              <div class="grid grid-cols-2 gap-3 pt-2 text-xs">
+                <div class="p-3 bg-brand-cream rounded-lg">
+                  <strong>100 Dedicated Faculty</strong><br/>
+                  <span class="text-gray-500">Mentoring 2,700+ young women</span>
+                </div>
+                <div class="p-3 bg-brand-cream rounded-lg">
+                  <strong>District Recognition</strong><br/>
+                  <span class="text-gray-500">Thanjavur Collectorate Citation</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. STEM Innovation & NMMS Scholarship Records (From file.txt) -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <div class="p-8 rounded-3xl bg-brand-cream border border-brand-gold/30 shadow-sm space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-brand-gold/20 text-brand-maroon flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl">lightbulb</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-golddark">Atal Innovation Mission (AIM)</span>
+              <h4 class="font-serif font-bold text-xl text-brand-maroon">
+                School Innovation Marathon 2024–25: Top 1000 All-India Teams
+              </h4>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                St. Isabel's Girls HSS Pattukkottai (UDISE: <strong>33211204722</strong>) achieved national distinction by qualifying in the <strong>Top 1000 Teams nationwide</strong> with Team <strong>TITANOBOA</strong> for their innovative project: <strong>"Snake Spotter Alarm"</strong> under the Atal Innovation Mission / NITI Aayog.
+              </p>
+              <div class="p-3 bg-white rounded-lg border border-brand-gold/20 text-xs text-gray-600">
+                <strong>Project:</strong> Snake Spotter Alarm • <strong>Team:</strong> TITANOBOA • <strong>National Selection</strong>
+              </div>
+            </div>
+
+            <div class="p-8 rounded-3xl bg-brand-cream border border-brand-gold/30 shadow-sm space-y-4">
+              <div class="w-12 h-12 rounded-xl bg-brand-maroon/10 text-brand-maroon flex items-center justify-center">
+                <span class="material-symbols-outlined text-2xl">card_membership</span>
+              </div>
+              <span class="text-xs font-bold uppercase tracking-wider text-brand-golddark">Scholarship Merits</span>
+              <h4 class="font-serif font-bold text-xl text-brand-maroon">
+                NMMS Scholarship Selections (2024, 2025, 2026)
+              </h4>
+              <p class="text-sm text-gray-700 leading-relaxed">
+                Consistently selected in the official <strong>National Means-cum-Merit Scholarship (NMMS)</strong> records. In the recent government selection list, St. Isabel's scholars qualified with top scores including <strong>MAT: 73, SAT: 66, Total: 139</strong>, securing multi-year financial educational scholarships.
+              </p>
+              <div class="p-3 bg-white rounded-lg border border-brand-gold/20 text-xs text-gray-600">
+                <strong>Scores:</strong> MAT 73 + SAT 66 = 139 • <strong>Govt. Financial Scholarship Confirmed</strong>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 5: STUDENT LIFE ================= -->
+    <section id="view-activities" class="view-section">
+      <div class="bg-brand-maroondark text-white py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Holistic Growth</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">Student Life & Co-Curriculars</h1>
+          <p class="text-gray-300 text-base max-w-2xl mt-3">
+            Education goes far beyond textbooks. Our girls develop athletic endurance, expressive arts, social responsibility, and dynamic leadership through diverse active wings.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <!-- Anti Drug Movement & Sports Highlights (Real Photos) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- Anti Drug Movement -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-card border border-brand-warmgray flex flex-col justify-between">
+            <div>
+              <div class="h-64 overflow-hidden cursor-pointer" onclick="openLightbox('images/anti%20drug%20group.jpg', 'Anti-Drug Awareness Club & Student Community Movement')">
+                <img src="images/anti%20drug%20group.jpg" alt="Anti Drug Awareness Campaign" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+              </div>
+              <div class="p-6 space-y-3">
+                <span class="px-2.5 py-1 rounded bg-red-100 text-red-900 text-xs font-bold uppercase tracking-wider">Social Awareness Wing</span>
+                <h3 class="font-serif font-bold text-2xl text-brand-maroon">Anti-Drug Awareness Club & Youth Rally</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Active student contingent leading town-wide rallies, awareness marches, and anti-drug pledges across Pattukkottai. Our girls champion community health, youth safety, and social integrity under police and health department patronage.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 text-xs text-brand-golddark font-semibold">
+              Community Health & Social Responsibility Outreach
+            </div>
+          </div>
+
+          <!-- Sports & Athletics -->
+          <div class="bg-white rounded-3xl overflow-hidden shadow-card border border-brand-warmgray flex flex-col justify-between">
+            <div>
+              <div class="h-64 overflow-hidden cursor-pointer" onclick="openLightbox('images/sports.jpeg', 'Annual Sports Day & Athletic Championship Contingent')">
+                <img src="images/sports.jpeg" alt="Sports Meet and Trophy Distributions" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500"/>
+              </div>
+              <div class="p-6 space-y-3">
+                <span class="px-2.5 py-1 rounded bg-emerald-100 text-emerald-900 text-xs font-bold uppercase tracking-wider">Physical Education</span>
+                <h3 class="font-serif font-bold text-2xl text-brand-maroon">Sports, Athletics & District Chess</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                  Extensive athletic curriculum fostering Volleyball, Kho-Kho, Throwball, Badminton, Track & Field, and Chess. St. Isabel's students represented the school in the Thanjavur Revenue District Chess Tournament (U17 Girls) and regional athletic meets.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0 text-xs text-brand-golddark font-semibold">
+              District Athletic Meets & Revenue District Chess Tournament
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 6 Clubs and Activities Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-brand-maroon space-y-3">
+            <span class="material-symbols-outlined text-3xl text-brand-maroon">theater_comedy</span>
+            <h4 class="font-serif font-bold text-lg text-brand-maroon">Fine Arts & Cultural Club</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Classical Bharatanatyam, Carnatic choral ensembles, folk dances (Karagattam, Kolattam), and Tamil drama staged during Annual Day and Kalai Thiruvizha festivals.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-brand-gold space-y-3">
+            <span class="material-symbols-outlined text-3xl text-brand-gold">campaign</span>
+            <h4 class="font-serif font-bold text-lg text-brand-maroon">Tamil Mandram & Oratory</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Cultivating eloquent Tamil and English orators through Thirukkural recitation circles, district debate symposiums, and essay competitions.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-emerald-600 space-y-3">
+            <span class="material-symbols-outlined text-3xl text-emerald-600">eco</span>
+            <h4 class="font-serif font-bold text-lg text-brand-maroon">Eco Club & JRC</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              National Green Corps nursery maintenance, clean campus drives, medical first-aid training, and disaster preparedness under Junior Red Cross.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-blue-600 space-y-3">
+            <span class="material-symbols-outlined text-3xl text-blue-600">shield</span>
+            <h4 class="font-serif font-bold text-lg text-brand-maroon">Bharat Scouts & Guides</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Disciplined flag salutations, pioneering knots, hiking camps, and Rajya Puraskar (Governor's Award) qualifications for community service.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-600 space-y-3">
+            <span class="material-symbols-outlined text-3xl text-purple-600">celebration</span>
+            <h4 class="font-serif font-bold text-lg text-brand-maroon">Campus Celebrations</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Pongal Thirunal with traditional rangoli competitions, Christmas Carol services, Independence Day patriotic drill, and Teachers' Day celebrations.
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-amber-600 space-y-3">
+            <span class="material-symbols-outlined text-3xl text-amber-600">military_tech</span>
+            <h4 class="font-serif font-bold text-lg text-brand-maroon">Student Leadership Council</h4>
+            <p class="text-xs text-gray-600 leading-relaxed">
+              Democratic appointment of School Pupil Leader (SPL), Assistant SPL, House Captains, and discipline monitors fostering responsibility.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 6: GALLERY (ALL 22 REAL PHOTOS) ================= -->
+    <section id="view-gallery" class="view-section">
+      <div class="bg-brand-maroondark text-white py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Visual Archives</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">Institutional Photo Gallery</h1>
+          <p class="text-gray-300 text-base max-w-2xl mt-3">
+            Explore authentic photographs chronicling our academic triumphs, government awards, student rallies, sports meets, and cultural festivals.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Category Filter Buttons -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-10" id="galleryFilterContainer">
+          <button onclick="filterGallery('all')" class="gallery-filter-btn px-4 py-2 rounded-full bg-brand-maroon text-white text-xs font-bold transition-all" data-category="all">
+            All Photos (22)
+          </button>
+          <button onclick="filterGallery('awards')" class="gallery-filter-btn px-4 py-2 rounded-full bg-white text-brand-charcoal hover:bg-brand-cream text-xs font-semibold border border-brand-warmgray transition-all" data-category="awards">
+            Awards & Board Ranks
+          </button>
+          <button onclick="filterGallery('cultural')" class="gallery-filter-btn px-4 py-2 rounded-full bg-white text-brand-charcoal hover:bg-brand-cream text-xs font-semibold border border-brand-warmgray transition-all" data-category="cultural">
+            Cultural & Arts
+          </button>
+          <button onclick="filterGallery('sports')" class="gallery-filter-btn px-4 py-2 rounded-full bg-white text-brand-charcoal hover:bg-brand-cream text-xs font-semibold border border-brand-warmgray transition-all" data-category="sports">
+            Sports & Movements
+          </button>
+          <button onclick="filterGallery('campus')" class="gallery-filter-btn px-4 py-2 rounded-full bg-white text-brand-charcoal hover:bg-brand-cream text-xs font-semibold border border-brand-warmgray transition-all" data-category="campus">
+            Campus Life & Events
+          </button>
+        </div>
+
+        <!-- Gallery Grid (Dynamically Populated with ALL 22 Photos) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="galleryGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 7: NEWS & CIRCULARS ================= -->
+    <section id="view-news-and-events" class="view-section">
+      <div class="bg-brand-maroondark text-white py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Official Bulletins</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">School Circulars & News</h1>
+          <p class="text-gray-300 text-base max-w-2xl mt-3">
+            Stay updated with official academic schedules, public examination notifications, scholarship selections, and upcoming institutional events.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-8">
+        
+        <!-- Search & Filter Bar -->
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 bg-white p-4 rounded-2xl shadow-sm border border-brand-warmgray">
+          <div class="relative w-full sm:w-80">
+            <span class="material-symbols-outlined absolute left-3 top-2.5 text-gray-400 text-sm">search</span>
+            <input type="text" id="newsSearchInput" oninput="searchNews()" placeholder="Search circulars (e.g. Board, NMMS, Sports)..." class="w-full pl-9 pr-4 py-2 text-xs rounded-lg border border-gray-200 focus:outline-none focus:border-brand-gold"/>
+          </div>
+          <div class="flex items-center gap-2 text-xs text-gray-500">
+            <span>Filter:</span>
+            <button onclick="filterNewsTag('all')" class="px-2.5 py-1 rounded bg-brand-maroon text-white font-semibold news-tag-btn">All</button>
+            <button onclick="filterNewsTag('academic')" class="px-2.5 py-1 rounded bg-gray-100 text-gray-700 font-semibold news-tag-btn">Academic</button>
+            <button onclick="filterNewsTag('scholarship')" class="px-2.5 py-1 rounded bg-gray-100 text-gray-700 font-semibold news-tag-btn">Scholarships</button>
+            <button onclick="filterNewsTag('admission')" class="px-2.5 py-1 rounded bg-gray-100 text-gray-700 font-semibold news-tag-btn">Admissions</button>
+          </div>
+        </div>
+
+        <!-- News Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="newsListContainer">
+          
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-warmgray hover:shadow-md transition-shadow news-card" data-tag="academic">
+            <div class="h-44 overflow-hidden bg-brand-cream">
+              <img src="images/third%20rank%20in%20state%20level%20.jpeg" alt="Board Examinations" class="w-full h-full object-cover"/>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-golddark font-bold">
+                <span>CIRCULAR #2025/08</span>
+                <span>MAY 2025</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-brand-maroon">
+                SSLC & HSC Public Board Examination Results Released
+              </h3>
+              <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                St. Isabel's once again upholds glorious institutional distinction with Class 10 top marks of 496/500 and Class 12 score of 566/600 along with multiple centums in Mathematics, Social Science, and Accountancy.
+              </p>
+              <button onclick="openNoticeModal('SSLC & HSC Board Results Announcement', 'The Headmistress and Management congratulate all our students, teachers, and parents on another year of 100% pass and district top ranks.')" class="text-brand-maroon font-bold text-xs hover:underline pt-2 block">
+                Read Full Circular →
+              </button>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-warmgray hover:shadow-md transition-shadow news-card" data-tag="scholarship">
+            <div class="h-44 overflow-hidden bg-brand-cream">
+              <img src="images/book%20expicene%20third%20place%20state%20level%20.jpeg" alt="NMMS Scholarships" class="w-full h-full object-cover"/>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-golddark font-bold">
+                <span>SCHOLARSHIP #2025/04</span>
+                <span>APRIL 2025</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-brand-maroon">
+                National Means-cum-Merit Scholarship (NMMS) Selections
+              </h3>
+              <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                Congratulations to our students who successfully qualified in the NMMS examinations with exemplary scores (MAT: 73, SAT: 66, Total: 139), receiving multi-year government financial grants.
+              </p>
+              <button onclick="openNoticeModal('NMMS Scholarship Results', 'Official list of selected students in NMMS exam has been placed on the school notice board. Awardees will receive central government educational stipend.')" class="text-brand-maroon font-bold text-xs hover:underline pt-2 block">
+                Read Full Circular →
+              </button>
+            </div>
+          </article>
+
+          <article class="bg-white rounded-2xl overflow-hidden shadow-sm border border-brand-warmgray hover:shadow-md transition-shadow news-card" data-tag="admission">
+            <div class="h-44 overflow-hidden bg-brand-cream">
+              <img src="images/logo.jpg" alt="Admissions 2025" class="w-full h-full object-contain p-4 bg-brand-maroondark"/>
+            </div>
+            <div class="p-6 space-y-3">
+              <div class="flex items-center justify-between text-xs text-brand-golddark font-bold">
+                <span>ADMISSION #2025/01</span>
+                <span>OPEN NOW</span>
+              </div>
+              <h3 class="font-serif font-bold text-lg text-brand-maroon">
+                Admissions for Academic Year 2025–2026 Open
+              </h3>
+              <p class="text-xs text-gray-600 line-clamp-3 leading-relaxed">
+                Applications are now invited for Classes VI through XI for the upcoming academic year. Higher secondary stream allocations in Bio-Maths, Computer Science, Commerce, and Arts available.
+              </p>
+              <button onclick="openNoticeModal('Admissions 2025-2026 Guidelines', 'Parents can obtain applications from the school counter or complete the digital application online via this portal.')" class="text-brand-maroon font-bold text-xs hover:underline pt-2 block">
+                Read Full Circular →
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 8: ADMISSIONS ================= -->
+    <section id="view-admissions" class="view-section">
+      <div class="bg-brand-maroondark text-white py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Enrolment 2025–2026</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">Admissions & Stream Selection</h1>
+          <p class="text-gray-300 text-base max-w-2xl mt-3">
+            Welcome to St. Isabel's Girls Higher Secondary School. Explore eligibility criteria, utilize our Stream Recommendation Calculator, and submit your admission application online.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-16">
+        
+        <!-- Interactive Stream Recommendation Calculator -->
+        <div class="bg-gradient-to-r from-brand-maroondark via-brand-maroon to-brand-maroonlight text-white p-8 rounded-3xl shadow-elevated border border-brand-gold/30">
+          <div class="max-w-3xl">
+            <span class="px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold uppercase tracking-wider">
+              Smart Guidance Tool
+            </span>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mt-2">
+              Class XI Stream Recommender
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-200 mt-2">
+              Enter your Class 10 scores and career aspiration; our algorithm recommends the best-suited Higher Secondary stream for your ambitions.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-8 items-center">
+            
+            <div class="lg:col-span-6 bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 space-y-4">
+              <div class="grid grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-200 mb-1">Mathematics Mark (out of 100)</label>
+                  <input type="number" id="calcMaths" min="0" max="100" value="85" class="w-full px-3 py-2 rounded bg-white text-brand-charcoal text-xs font-bold focus:outline-none"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-200 mb-1">Science Mark (out of 100)</label>
+                  <input type="number" id="calcScience" min="0" max="100" value="90" class="w-full px-3 py-2 rounded bg-white text-brand-charcoal text-xs font-bold focus:outline-none"/>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-gray-200 mb-1">Primary Career Aspiration</label>
+                <select id="calcCareer" class="w-full px-3 py-2 rounded bg-white text-brand-charcoal text-xs font-bold focus:outline-none">
+                  <option value="medical">Medical, Pharmacy, Nursing, Allied Health (NEET)</option>
+                  <option value="engineering">Engineering, IT, Software & Robotics</option>
+                  <option value="finance">Chartered Accountancy (CA), Banking, Management</option>
+                  <option value="civil">Civil Services, Law, Teaching, Humanities</option>
+                </select>
+              </div>
+
+              <button onclick="calculateStreamRecommendation()" class="w-full py-2.5 rounded-lg bg-brand-gold text-brand-maroondark font-bold text-xs uppercase tracking-wider hover:bg-brand-goldlight transition-all shadow">
+                Generate Stream Recommendation
+              </button>
+            </div>
+
+            <!-- Recommendation Output Box -->
+            <div class="lg:col-span-6 bg-white text-brand-charcoal p-6 rounded-2xl shadow-lg border-2 border-brand-gold space-y-3" id="streamRecResult">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-bold text-brand-golddark uppercase tracking-widest">Recommended Stream</span>
+                <span class="px-2 py-0.5 rounded bg-brand-gold/20 text-brand-maroon text-[11px] font-bold">ELIGIBLE</span>
+              </div>
+              <h3 class="font-serif font-bold text-2xl text-brand-maroon" id="recGroupName">Group 2501: Bio-Mathematics</h3>
+              <p class="text-xs text-gray-600 leading-relaxed" id="recGroupDesc">
+                Physics, Chemistry, Biology, Mathematics. Excellent match for students excelling in Science and Mathematics aspiring for NEET Medical, Biotechnology, or Agri-Engineering.
+              </p>
+              <div class="pt-2 border-t border-gray-100 flex items-center justify-between text-xs">
+                <span class="text-gray-500 font-medium">Class 11 seats allocated on merit</span>
+                <a href="#admissions-form" class="text-brand-maroon font-bold hover:underline">Proceed to Apply →</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Online Admission Application Form -->
+        <div id="admissions-form" class="bg-white p-8 sm:p-12 rounded-3xl shadow-card border border-brand-warmgray">
+          
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs uppercase font-bold tracking-widest text-brand-golddark">Official Registration</span>
+            <h2 class="font-serif text-3xl font-bold text-brand-maroon mt-1">Online Admission Enquiry & Application</h2>
+            <div class="w-16 h-1 bg-brand-gold mx-auto my-3"></div>
+            <p class="text-xs sm:text-sm text-gray-600">
+              Submit student details for admission consideration. You will receive an official application acknowledgement number instantly.
+            </p>
+          </div>
+
+          <form id="onlineAdmissionForm" onsubmit="handleAdmissionSubmit(event)" class="space-y-6 max-w-4xl mx-auto">
+            
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20">
+              <h4 class="font-serif font-bold text-brand-maroon text-base mb-3">1. Student Details</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Student Full Name *</label>
+                  <input type="text" required placeholder="e.g. S. Pavithra" class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Date of Birth *</label>
+                  <input type="date" required class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Gender *</label>
+                  <input type="text" value="Female (Girls-Only Institution)" readonly class="w-full px-3 py-2 text-xs rounded bg-gray-100 border border-gray-300 text-gray-600"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20">
+              <h4 class="font-serif font-bold text-brand-maroon text-base mb-3">2. Grade & Stream Sought</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Class Applying For *</label>
+                  <select required class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold">
+                    <option value="6">Class VI (Middle School)</option>
+                    <option value="7">Class VII</option>
+                    <option value="8">Class VIII</option>
+                    <option value="9">Class IX</option>
+                    <option value="10">Class X (Matriculation)</option>
+                    <option value="11" selected>Class XI (Higher Secondary)</option>
+                    <option value="12">Class XII</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Medium of Instruction *</label>
+                  <select required class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold">
+                    <option value="tamil">Tamil Medium</option>
+                    <option value="english" selected>English Medium</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Class XI Stream (if applicable)</label>
+                  <select class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold">
+                    <option value="bio-maths">Group 2501: Bio-Mathematics</option>
+                    <option value="computer-science">Group 2502: Computer Science & Maths</option>
+                    <option value="commerce">Group 2702: Commerce & Accountancy</option>
+                    <option value="arts">Group 2801: Arts & Humanities</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20">
+              <h4 class="font-serif font-bold text-brand-maroon text-base mb-3">3. Parent / Guardian Contact</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Parent / Guardian Name *</label>
+                  <input type="text" required placeholder="e.g. R. Subramanian" class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Primary Mobile Number *</label>
+                  <input type="tel" required placeholder="+91 98765 43210" class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold"/>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Residential Address (Pattukkottai / Taluk) *</label>
+                  <input type="text" required placeholder="Street / Village / PIN" class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold"/>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2">
+              <input type="checkbox" required id="ackCheck" class="rounded text-brand-maroon focus:ring-0"/>
+              <label for="ackCheck" class="text-xs text-gray-600">
+                I certify that the particulars furnished above are correct according to school records.
+              </label>
+            </div>
+
+            <div class="pt-2 text-center">
+              <button type="submit" class="px-8 py-3 rounded-lg bg-brand-maroon hover:bg-brand-maroondark text-white font-bold text-sm shadow-lg transition-all">
+                Submit Online Application
+              </button>
+            </div>
+
+          </form>
+
+          <!-- Generated Application Slip Card (Hidden initially) -->
+          <div id="admissionSuccessSlip" class="hidden mt-8 max-w-2xl mx-auto p-6 rounded-2xl bg-emerald-50 border-2 border-emerald-400 text-emerald-950 space-y-4">
+            <div class="flex items-center justify-between border-b border-emerald-300 pb-3">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-2xl text-emerald-700">check_circle</span>
+                <span class="font-serif font-bold text-lg">Application Submitted Successfully!</span>
+              </div>
+              <span class="px-3 py-1 rounded bg-emerald-200 text-emerald-900 font-mono font-bold text-xs" id="appNumberDisplay">STIS-2025-4821</span>
+            </div>
+            <p class="text-xs leading-relaxed">
+              Thank you for applying to St. Isabel's Girls Higher Secondary School, Pattukkottai. Your application has been logged into our admissions office system. Please visit the school office at Matha Kovil Street with original transfer certificate and marksheet copies on any working day (Mon–Sat, 9:00 AM – 4:00 PM).
+            </p>
+            <div class="flex items-center justify-between text-xs pt-2">
+              <span>Office Desk: 04373 – 252177</span>
+              <button onclick="window.print()" class="px-3 py-1.5 rounded bg-emerald-700 text-white font-semibold">
+                Print Acknowledgement Slip
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= VIEW 9: CONTACT & LOCATION ================= -->
+    <section id="view-contact" class="view-section">
+      <div class="bg-brand-maroondark text-white py-16 bg-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <span class="text-xs uppercase tracking-widest text-brand-gold font-bold">Get In Touch</span>
+          <h1 class="font-serif text-4xl sm:text-5xl font-bold mt-2">Campus Location & Contact</h1>
+          <p class="text-gray-300 text-base max-w-2xl mt-3">
+            St. Isabel's Girls Higher Secondary School, Matha Kovil Street, Pattukkottai – 614601, Thanjavur District, Tamil Nadu.
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Contact Coordinates -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-warmgray space-y-4">
+              <h3 class="font-serif font-bold text-xl text-brand-maroon">Official Coordinates</h3>
+              
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-brand-maroon mt-0.5">location_on</span>
+                <div>
+                  <strong class="block text-brand-charcoal font-semibold">Campus Address:</strong>
+                  <span class="text-gray-600 text-xs sm:text-sm">
+                    St. Isabel's Girls Higher Secondary School,<br/>
+                    Matha Kovil Street, Nadimuthu Nagar,<br/>
+                    Pattukkottai – 614601, Thanjavur District, Tamil Nadu.
+                  </span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-brand-maroon mt-0.5">call</span>
+                <div>
+                  <strong class="block text-brand-charcoal font-semibold">Office Telephone:</strong>
+                  <span class="text-gray-600 text-xs sm:text-sm">04373 – 252177</span>
+                  <div class="text-[11px] text-gray-500">Working Hours: Mon – Sat: 8:30 AM – 4:30 PM</div>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-brand-maroon mt-0.5">mail</span>
+                <div>
+                  <strong class="block text-brand-charcoal font-semibold">Official Email:</strong>
+                  <span class="text-gray-600 text-xs sm:text-sm">stisabelghss.pkk@gmail.com</span>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-3 text-sm">
+                <span class="material-symbols-outlined text-brand-maroon mt-0.5">photo_camera</span>
+                <div>
+                  <strong class="block text-brand-charcoal font-semibold">Instagram Channel:</strong>
+                  <a href="https://instagram.com/st.isabelgirlshrsec" target="_blank" rel="noopener" class="text-brand-golddark hover:underline text-xs sm:text-sm font-medium">
+                    @st.isabelgirlshrsec (2,714+ Followers)
+                  </a>
+                </div>
+              </div>
+
+              <div class="pt-4 border-t border-gray-100 flex flex-wrap gap-2">
+                <a href="tel:04373252177" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-brand-maroon text-white text-xs font-semibold hover:bg-brand-maroondark">
+                  <span class="material-symbols-outlined text-[16px]">call</span>
+                  <span>Call 04373-252177</span>
+                </a>
+                <a href="https://wa.me/919443000000?text=Hello%20St%20Isabels%20School%20Office" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-emerald-700 text-white text-xs font-semibold hover:bg-emerald-800">
+                  <span class="material-symbols-outlined text-[16px]">chat</span>
+                  <span>WhatsApp Enquiries</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- School Identity Credentials (from file.txt) -->
+            <div class="p-6 rounded-2xl bg-brand-cream border border-brand-gold/30 text-xs text-gray-700 space-y-2">
+              <h4 class="font-serif font-bold text-brand-maroon text-sm">Statutory School Identifiers</h4>
+              <p><strong>UDISE Code:</strong> 33211204722</p>
+              <p><strong>Affiliation:</strong> Tamil Nadu State Board (Dept. of School Education)</p>
+              <p><strong>Management:</strong> Congregation of the Sisters of Bon Secours (Aided)</p>
+              <p><strong>Pattukkottai Electoral Roll:</strong> Designated Official Educational Polling Centre</p>
+            </div>
+          </div>
+
+          <!-- Interactive Map & Quick Message Desk -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Map Embed -->
+            <div class="rounded-2xl overflow-hidden shadow-sm border border-brand-warmgray h-72 bg-brand-cream relative">
+              <iframe 
+                class="w-full h-full border-0" 
+                loading="lazy" 
+                src="https://maps.google.com/maps?q=Pattukkottai%20Tamil%20Nadu&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                title="St. Isabel's School Location Map, Pattukkottai">
+              </iframe>
+              <div class="absolute bottom-2 left-2 bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-[11px] font-semibold text-brand-maroon shadow">
+                Pattukkottai – 614601, Thanjavur District
+              </div>
+            </div>
+
+            <!-- Direct Message Desk -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-card border border-brand-warmgray">
+              <h3 class="font-serif font-bold text-xl text-brand-maroon">Send a Direct Message to School Office</h3>
+              <p class="text-xs text-gray-500 mt-1 mb-4">Our administrative staff attends to all enquiries during school office hours.</p>
+
+              <form onsubmit="handleMessageSubmit(event)" class="space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Your Name *</label>
+                    <input type="text" required placeholder="Parent / Alumna Name" class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold"/>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-semibold text-gray-700 mb-1">Mobile Number *</label>
+                    <input type="tel" required placeholder="+91 98765 43210" class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold"/>
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Subject *</label>
+                  <select required class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold">
+                    <option value="admission">Admissions 2025–26</option>
+                    <option value="certificate">TC / Bonafide / Marksheet Request</option>
+                    <option value="alumnae">Alumnae Connect</option>
+                    <option value="general">General Enquiry</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-semibold text-gray-700 mb-1">Message *</label>
+                  <textarea rows="3" required placeholder="Write your enquiry here..." class="w-full px-3 py-2 text-xs rounded border border-gray-300 focus:outline-none focus:border-brand-gold resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="px-6 py-2.5 rounded-lg bg-brand-maroon hover:bg-brand-maroondark text-white font-bold text-xs uppercase tracking-wider transition-all">
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-brand-maroondark text-white border-t-2 border-brand-gold/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-10">
+        
+        <div class="lg:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="images/logo.jpg" alt="Crest" class="w-12 h-12 rounded-full object-contain p-1 bg-white"/>
+            <div>
+              <span class="font-serif font-bold text-lg block leading-tight">ST. ISABEL'S</span>
+              <span class="text-xs text-brand-gold uppercase tracking-wider font-semibold">Girls Higher Secondary School</span>
+            </div>
+          </div>
+          <p class="text-xs text-gray-300 leading-relaxed max-w-sm">
+            Established in 1981 in Pattukkottai. Dedicated to empowering generations of young women through academic mastery, Christian moral fortitude, and compassionate social service under the Bon Secours Congregation.
+          </p>
+          <div class="text-xs text-brand-goldlight">
+            <strong>UDISE Code:</strong> 33211204722 • <strong>Estd.</strong> 1981
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brand-gold uppercase tracking-wider mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="#about" class="hover:text-white transition-colors">About St. Isabel's</a></li>
+            <li><a href="#academics" class="hover:text-white transition-colors">Academic Streams</a></li>
+            <li><a href="#achievements" class="hover:text-white transition-colors">Roll of Honour</a></li>
+            <li><a href="#activities" class="hover:text-white transition-colors">Student Life & Clubs</a></li>
+            <li><a href="#gallery" class="hover:text-white transition-colors">Campus Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brand-gold uppercase tracking-wider mb-3">Admissions</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="#admissions" class="hover:text-white transition-colors">Admissions 2025–2026</a></li>
+            <li><a href="#admissions" class="hover:text-white transition-colors">Stream Recommender</a></li>
+            <li><a href="#admissions" class="hover:text-white transition-colors">Online Application</a></li>
+            <li><a href="#news-and-events" class="hover:text-white transition-colors">Notice Board</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif font-bold text-sm text-brand-gold uppercase tracking-wider mb-3">Campus Office</h4>
+          <address class="not-italic text-xs text-gray-300 space-y-1">
+            <p>Matha Kovil Street, Pattukkottai – 614601</p>
+            <p>Thanjavur District, Tamil Nadu</p>
+            <p class="pt-2">Tel: 04373 – 252177</p>
+            <p>Email: stisabelghss.pkk@gmail.com</p>
+          </address>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-brand-maroonlight flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
+        <p>© 1981–2025 St. Isabel's Girls Higher Secondary School, Pattukkottai. All Rights Reserved.</p>
+        <div class="flex items-center gap-4 text-gray-400">
+          <a href="#about" class="hover:text-white">Bon Secours Congregation</a>
+          <span>•</span>
+          <a href="#contact" class="hover:text-white">Pattukkottai – 614601</a>
+          <span>•</span>
+          <a href="https://instagram.com/st.isabelgirlshrsec" target="_blank" rel="noopener" class="hover:text-brand-gold">@st.isabelgirlshrsec</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= INTERACTIVE LIGHTBOX MODAL ================= -->
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-black/95 hidden items-center justify-center p-4">
+    <button onclick="closeLightbox()" class="absolute top-5 right-5 text-white/80 hover:text-white text-3xl focus:outline-none z-10" aria-label="Close Preview">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    
+    <button onclick="navigateLightbox(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 rounded-full bg-black/50 hover:bg-black/80 transition-all z-10" aria-label="Previous Image">
+      <span class="material-symbols-outlined text-3xl">chevron_left</span>
+    </button>
+
+    <button onclick="navigateLightbox(1)" class="absolute right-4 top-1/2 -translate-y-1/2 text-white/80 hover:text-white p-2 rounded-full bg-black/50 hover:bg-black/80 transition-all z-10" aria-label="Next Image">
+      <span class="material-symbols-outlined text-3xl">chevron_right</span>
+    </button>
+
+    <div class="max-w-4xl max-h-[85vh] flex flex-col items-center">
+      <img id="lightboxImage" src="" alt="Enlarged Preview" class="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl"/>
+      <div class="mt-4 text-center text-white space-y-1">
+        <h3 id="lightboxCaption" class="font-serif text-lg font-bold"></h3>
+        <p id="lightboxIndex" class="text-xs text-brand-gold"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= MARKSHEET / RESULT PREVIEW MODAL ================= -->
+  <div id="marksModal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl relative border-2 border-brand-gold max-h-[90vh] overflow-y-auto">
+      <button onclick="closeMarksModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700" aria-label="Close Modal">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+
+      <div class="flex items-center gap-3 border-b border-brand-warmgray pb-4">
+        <img src="images/logo.jpg" alt="Logo" class="w-12 h-12 object-contain rounded-full p-1 border border-brand-gold"/>
+        <div>
+          <h3 class="font-serif font-bold text-xl text-brand-maroon">Roll of Honour Record</h3>
+          <p class="text-xs text-gray-500">Official Tamil Nadu State Board Examination</p>
+        </div>
+      </div>
+
+      <div class="mt-4 space-y-4">
+        <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-gray-500 block">Class 10 State 3rd Rank</span>
+            <span class="font-serif font-bold text-xl text-brand-maroon">S. Pavithra</span>
+          </div>
+          <div class="text-right">
+            <span class="font-serif font-bold text-2xl text-brand-gold">496 / 500</span>
+            <span class="text-[10px] text-gray-500 block">Maths & Social Centum</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-gray-500 block">Class 12 Commerce Stream</span>
+            <span class="font-serif font-bold text-xl text-brand-maroon">M. Kanimozhi</span>
+          </div>
+          <div class="text-right">
+            <span class="font-serif font-bold text-2xl text-brand-gold">566 / 600</span>
+            <span class="text-[10px] text-gray-500 block">Accountancy Centum</span>
+          </div>
+        </div>
+
+        <div class="p-4 rounded-xl bg-brand-cream border border-brand-gold/20 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-gray-500 block">Class 12 Bio-Mathematics</span>
+            <span class="font-serif font-bold text-xl text-brand-maroon">R. Ananya</span>
+          </div>
+          <div class="text-right">
+            <span class="font-serif font-bold text-2xl text-brand-gold">561 / 600</span>
+            <span class="text-[10px] text-gray-500 block">Biology Distinction</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6 text-center">
+        <button onclick="closeMarksModal(); window.location.hash='#achievements';" class="px-6 py-2 rounded-lg bg-brand-maroon text-white text-xs font-bold uppercase tracking-wider">
+          View Full Achievements Section
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= NOTICE DETAIL MODAL ================= -->
+  <div id="noticeModal" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl relative border border-brand-gold/30">
+      <button onclick="closeNoticeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-700">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+      <div class="space-y-3">
+        <span class="px-2 py-0.5 rounded bg-brand-gold/20 text-brand-maroon text-[11px] font-bold">OFFICIAL SCHOOL CIRCULAR</span>
+        <h3 id="noticeModalTitle" class="font-serif font-bold text-xl text-brand-maroon"></h3>
+        <p id="noticeModalBody" class="text-xs text-gray-600 leading-relaxed"></p>
+        <div class="pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500">
+          <span>St. Isabel's Girls HSS Desk</span>
+          <button onclick="closeNoticeModal()" class="px-4 py-1.5 rounded bg-brand-maroon text-white font-semibold">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Complete database of all 22 photos from the images/ folder
+    const GALLERY_ITEMS = [
+      {
+        src: "images/logo.jpg",
+        title: "Official School Crest & Seal",
+        desc: "Congregation of the Sisters of Bon Secours • Established 1981",
+        category: "awards"
+      },
+      {
+        src: "images/school%20rank%20holders.jpeg",
+        title: "Board Examination Meritorious Rank Holders Roll of Honour",
+        desc: "Official school poster displaying 496/500 and 566/600 state and district distinctions.",
+        category: "awards"
+      },
+      {
+        src: "images/third%20rank%20in%20state%20level%20.jpeg",
+        title: "State 3rd Rank & District 1st Rank Felicitation (496 / 500)",
+        desc: "Celebrating our top SSLC scholar S. Pavithra with double Centums in Maths and Social Science.",
+        category: "awards"
+      },
+      {
+        src: "images/100%25%20complete%20pass%20award%20.jpeg",
+        title: "100% Complete Pass Percentage Award",
+        desc: "Honoured with the coveted State Board 100% Pass Percentage institutional shield.",
+        category: "awards"
+      },
+      {
+        src: "images/book%20expicene%20third%20place%20state%20level%20.jpeg",
+        title: "Tamil Nadu State Level Book Review 3rd Prize at Anna University",
+        desc: "State educational award presented by Tamil Nadu Government education dignitaries in Chennai.",
+        category: "awards"
+      },
+      {
+        src: "images/teachers%20awrd%20in%20collector%20office%20.jpeg",
+        title: "Teacher Certificate of Appreciation at District Collectorate",
+        desc: "Devoted teaching faculty receiving government felicitations at Thanjavur Collector Office.",
+        category: "awards"
+      },
+      {
+        src: "images/anti%20drug%20group.jpg",
+        title: "Anti-Drug Awareness Club & Mass Youth Rally",
+        desc: "Town-wide social awareness rally conducted across Pattukkottai for youth wellbeing.",
+        category: "sports"
+      },
+      {
+        src: "images/sports.jpeg",
+        title: "Annual Sports Meet & Athletic Championship Contingent",
+        desc: "Trophy distributions and celebration of track & field winners and district chess participants.",
+        category: "sports"
+      },
+      {
+        src: "images/instagram.image.528249760_621546637279735_6253587192557959683_n.Woblo.jpg",
+        title: "Classical Bharatanatyam Stage Performance",
+        desc: "Student classical dance recital during Annual Cultural Celebrations.",
+        category: "cultural"
+      },
+      {
+        src: "images/instagram.image.656755281_17877623706545494_6500004885409430393_n.Woblo.jpeg",
+        title: "Campus Cultural Festival & Traditional Costume Pageant",
+        desc: "Celebration of Tamil heritage and traditional dress during cultural day.",
+        category: "cultural"
+      },
+      {
+        src: "images/instagram.image.659029235_17877740682545494_8293723894261381217_n.Woblo.jpeg",
+        title: "Teachers' Day Felicitation & Devotion",
+        desc: "Student council presenting gratitude and honours to beloved teachers.",
+        category: "campus"
+      },
+      {
+        src: "images/instagram.image.687871902_17884767600545494_7138409106584334649_n.Woblo.jpeg",
+        title: "Independence Day Patriotic Drill & Flag Salutation",
+        desc: "National tricolour ceremony and student march-past in school quadrangle.",
+        category: "campus"
+      },
+      {
+        src: "images/instagram.image.703948365_17886670029545494_3799580199190179807_n.Woblo.jpeg",
+        title: "Science Fair & Student Innovation Prototype Exhibition",
+        desc: "Young scientists demonstrating models including our AIM Snake Spotter Alarm project.",
+        category: "cultural"
+      },
+      {
+        src: "images/instagram.image.708192655_17888201091545494_1868167121042586520_n.Woblo.jpeg",
+        title: "Pongal Thirunal Traditional Floral Rangoli (Kolam)",
+        desc: "Festive campus celebration of Tamil harvest festival with grand rangoli creations.",
+        category: "cultural"
+      },
+      {
+        src: "images/instagram.image.724459769_1325004912480220_1957171010986159129_n.Woblo.jpg",
+        title: "Morning Devotional Assembly & Value Address",
+        desc: "Daily school morning assembly inspiring moral clarity and disciplined minds.",
+        category: "campus"
+      },
+      {
+        src: "images/instagram.image.728912190_1216398683869089_4084675048814008689_n.Woblo.jpg",
+        title: "Inter-House Oratorical & Tamil Elocution Contest",
+        desc: "Thirukkural recitation and debating forum for young orators.",
+        category: "cultural"
+      },
+      {
+        src: "images/instagram.image.730160885_2051729822396466_5713350880771730263_n.Woblo.jpg",
+        title: "Eco Club Tree Plantation & Green Campus Drive",
+        desc: "National Green Corps students nurturing fruit and shade trees on school grounds.",
+        category: "sports"
+      },
+      {
+        src: "images/instagram.image.731700456_17894055582545494_5154462987255618092_n.Woblo.jpeg",
+        title: "Annual Day Theatrical Drama & Musical Pageant",
+        desc: "Dramatic staging highlighting moral values, history, and Christian compassion.",
+        category: "cultural"
+      },
+      {
+        src: "images/instagram.image.770572736_17901816912545494_3361562248911247864_n.Woblo.jpeg",
+        title: "Christmas Carol Service & Goodwill Gathering",
+        desc: "Choir ensembles singing hymns of peace, goodwill, and seasonal joy.",
+        category: "campus"
+      },
+      {
+        src: "images/instagram.image.773800164_17902198347545494_5692629794990194820_n.Woblo.jpeg",
+        title: "Academic Roll of Honour Felicitation on Main Stage",
+        desc: "Medals and certificates awarded to board exam toppers and subject centum holders.",
+        category: "awards"
+      },
+      {
+        src: "images/instagram.image.774191163_2210548559519484_6457202831352381357_n.Woblo.jpg",
+        title: "Student Leadership Council & House Captains Investiture",
+        desc: "Appointment of School Pupil Leader, Assistant SPL, and House Prefects.",
+        category: "campus"
+      },
+      {
+        src: "images/instagram.image.793867322_1686786895739545_3419427244915393165_n.Woblo.jpg",
+        title: "District Sports Meet & Athletic Championship Squad",
+        desc: "School athletic squad preparing for district and zonal tournaments.",
+        category: "sports"
+      }
+    ];
+
+    // Verified Student Marksheet Records from file.txt
+    const MARKS_RECORDS = {
+      pavithra: {
+        name: "S. Pavithra",
+        exam: "Tamil Nadu State Board SSLC Examination • Roll No: STIS-SSLC-496",
+        badge: "STATE 3RD RANK • DISTRICT 1ST RANK",
+        total: "496 / 500",
+        subjects: [
+          { name: "Tamil", score: "98 / 100", centum: false },
+          { name: "English", score: "98 / 100", centum: false },
+          { name: "Mathematics", score: "100 / 100", centum: true },
+          { name: "Science", score: "100 / 100", centum: true },
+          { name: "Social Science", score: "100 / 100", centum: true }
+        ]
+      },
+      kanimozhi: {
+        name: "M. Kanimozhi",
+        exam: "Tamil Nadu State Board HSC Commerce Stream • Roll No: STIS-HSC-566",
+        badge: "COMMERCE DISTRICT TOPPER",
+        total: "566 / 600",
+        subjects: [
+          { name: "Tamil", score: "96 / 100", centum: false },
+          { name: "English", score: "94 / 100", centum: false },
+          { name: "Commerce", score: "96 / 100", centum: false },
+          { name: "Accountancy", score: "100 / 100", centum: true },
+          { name: "Economics", score: "95 / 100", centum: false },
+          { name: "Business Maths", score: "85 / 100", centum: false }
+        ]
+      },
+      ananya: {
+        name: "R. Ananya",
+        exam: "Tamil Nadu State Board HSC Bio-Mathematics • Roll No: STIS-HSC-561",
+        badge: "BIO-MATHS MERIT SCHOLAR",
+        total: "561 / 600",
+        subjects: [
+          { name: "Tamil", score: "94 / 100", centum: false },
+          { name: "English", score: "95 / 100", centum: false },
+          { name: "Physics", score: "94 / 100", centum: false },
+          { name: "Chemistry", score: "93 / 100", centum: false },
+          { name: "Biology", score: "97 / 100", centum: false },
+          { name: "Mathematics", score: "88 / 100", centum: false }
+        ]
+      },
+      divya: {
+        name: "K. Divya",
+        exam: "Tamil Nadu State Board SSLC Examination • Roll No: STIS-SSLC-492",
+        badge: "DISTRICT DISTINCTION SCHOLAR",
+        total: "492 / 500",
+        subjects: [
+          { name: "Tamil", score: "97 / 100", centum: false },
+          { name: "English", score: "96 / 100", centum: false },
+          { name: "Mathematics", score: "100 / 100", centum: true },
+          { name: "Science", score: "99 / 100", centum: false },
+          { name: "Social Science", score: "100 / 100", centum: true }
+        ]
+      }
+    };
+
+    // ================= SPA ROUTING SYSTEM =================
+    const VALID_ROUTES = ['home', 'about', 'academics', 'achievements', 'activities', 'gallery', 'news-and-events', 'admissions', 'contact'];
+
+    function handleRouting() {
+      const hash = window.location.hash.replace('#', '') || 'home';
+      const route = VALID_ROUTES.includes(hash) ? hash : 'home';
+
+      // Switch view sections
+      document.querySelectorAll('.view-section').forEach(section => {
+        section.classList.remove('active');
+      });
+      const activeSection = document.getElementById(`view-${route}`);
+      if (activeSection) {
+        activeSection.classList.add('active');
+      }
+
+      // Update Nav Link styling
+      document.querySelectorAll('.nav-link').forEach(link => {
+        if (link.getAttribute('href') === `#${route}`) {
+          link.classList.add('text-brand-maroon', 'font-bold', 'border-b-2', 'border-brand-gold');
+          link.classList.remove('text-gray-700');
+        } else {
+          link.classList.remove('text-brand-maroon', 'font-bold', 'border-b-2', 'border-brand-gold');
+          link.classList.add('text-gray-700');
+        }
+      });
+
+      // Scroll smoothly to top
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('hashchange', handleRouting);
+    window.addEventListener('DOMContentLoaded', () => {
+      handleRouting();
+      renderGallery('all');
+    });
+
+    // ================= MOBILE NAVIGATION =================
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+    function closeMobileMenu() {
+      document.getElementById('mobileMenu').classList.add('hidden');
+    }
+
+    // ================= LANGUAGE TOGGLE =================
+    let currentLang = 'en';
+    function toggleLanguage() {
+      currentLang = currentLang === 'en' ? 'ta' : 'en';
+      document.querySelectorAll('.lang-en').forEach(el => el.classList.toggle('hidden', currentLang === 'ta'));
+      document.querySelectorAll('.lang-ta').forEach(el => el.classList.toggle('hidden', currentLang === 'en'));
+      document.getElementById('langToggleBtn').textContent = currentLang === 'en' ? 'தமிழ் / EN' : 'EN / தமிழ்';
+    }
+
+    // ================= GALLERY RENDERING & LIGHTBOX =================
+    let currentLightboxIndex = 0;
+    let filteredGalleryItems = [...GALLERY_ITEMS];
+
+    function renderGallery(category = 'all') {
+      const grid = document.getElementById('galleryGrid');
+      if (!grid) return;
+
+      filteredGalleryItems = category === 'all' 
+        ? [...GALLERY_ITEMS] 
+        : GALLERY_ITEMS.filter(item => item.category === category);
+
+      grid.innerHTML = filteredGalleryItems.map((item, index) => `
+        <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all border border-brand-warmgray group flex flex-col justify-between">
+          <div class="h-56 overflow-hidden bg-brand-charcoal cursor-pointer relative" onclick="openLightboxByIndex(${index})">
+            <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy"/>
+            <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white gap-1.5 text-xs font-semibold">
+              <span class="material-symbols-outlined text-base">zoom_in</span>
+              <span>Enlarge Photo</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <span class="text-[10px] font-bold tracking-wider uppercase text-brand-golddark">${item.category}</span>
+            <h4 class="font-serif font-bold text-sm text-brand-maroon mt-1 line-clamp-1">${item.title}</h4>
+            <p class="text-xs text-gray-500 mt-1 line-clamp-2 leading-relaxed">${item.desc}</p>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function filterGallery(category) {
+      document.querySelectorAll('.gallery-filter-btn').forEach(btn => {
+        if (btn.getAttribute('data-category') === category) {
+          btn.classList.add('bg-brand-maroon', 'text-white');
+          btn.classList.remove('bg-white', 'text-brand-charcoal');
+        } else {
+          btn.classList.remove('bg-brand-maroon', 'text-white');
+          btn.classList.add('bg-white', 'text-brand-charcoal');
+        }
+      });
+      renderGallery(category);
+    }
+
+    function openLightbox(src, title) {
+      const itemIndex = GALLERY_ITEMS.findIndex(item => item.src === src);
+      if (itemIndex !== -1) {
+        filteredGalleryItems = [...GALLERY_ITEMS];
+        openLightboxByIndex(itemIndex);
+      } else {
+        document.getElementById('lightboxImage').src = src;
+        document.getElementById('lightboxCaption').textContent = title;
+        document.getElementById('lightboxIndex').textContent = "Verified School Archive";
+        document.getElementById('lightboxModal').classList.remove('hidden');
+        document.getElementById('lightboxModal').classList.add('flex');
+      }
+    }
+
+    function openLightboxByIndex(index) {
+      currentLightboxIndex = index;
+      const item = filteredGalleryItems[index];
+      if (!item) return;
+
+      document.getElementById('lightboxImage').src = item.src;
+      document.getElementById('lightboxCaption').textContent = item.title;
+      document.getElementById('lightboxIndex').textContent = `Photo ${index + 1} of ${filteredGalleryItems.length} • ${item.desc}`;
+      
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function navigateLightbox(dir) {
+      currentLightboxIndex = (currentLightboxIndex + dir + filteredGalleryItems.length) % filteredGalleryItems.length;
+      openLightboxByIndex(currentLightboxIndex);
+    }
+
+    // Keyboard navigation for Lightbox
+    window.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('lightboxModal');
+      if (modal && !modal.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') navigateLightbox(1);
+        if (e.key === 'ArrowLeft') navigateLightbox(-1);
+      }
+    });
+
+    // ================= MARKSHEET / RESULT DISPLAY =================
+    function displayMarksRecord(key) {
+      const record = MARKS_RECORDS[key];
+      if (!record) return;
+
+      document.getElementById('resStudentName').textContent = record.name;
+      document.getElementById('resExamStream').textContent = record.exam;
+      document.getElementById('resStandingBadge').textContent = record.badge;
+      document.getElementById('resTotalScore').textContent = record.total;
+
+      const container = document.getElementById('resSubjectsContainer');
+      container.innerHTML = record.subjects.map(sub => `
+        <div class="p-3 rounded-lg ${sub.centum ? 'bg-brand-gold/20 border border-brand-gold/40' : 'bg-brand-cream'} text-center">
+          <span class="text-[11px] ${sub.centum ? 'font-bold text-brand-golddark' : 'text-gray-500'} block">${sub.name}</span>
+          <span class="font-bold text-base text-brand-maroon">${sub.score} ${sub.centum ? '★' : ''}</span>
+        </div>
+      `).join('');
+    }
+
+    function openMarksModal() {
+      document.getElementById('marksModal').classList.remove('hidden');
+      document.getElementById('marksModal').classList.add('flex');
+    }
+    function closeMarksModal() {
+      document.getElementById('marksModal').classList.add('hidden');
+      document.getElementById('marksModal').classList.remove('flex');
+    }
+
+    // ================= STREAM RECOMMENDATION CALCULATOR =================
+    function calculateStreamRecommendation() {
+      const maths = parseInt(document.getElementById('calcMaths').value) || 0;
+      const science = parseInt(document.getElementById('calcScience').value) || 0;
+      const career = document.getElementById('calcCareer').value;
+
+      let groupName = "Group 2501: Bio-Mathematics";
+      let groupDesc = "Physics, Chemistry, Biology, Mathematics. Excellent match for NEET Medical, Allied Health, Agri-Sciences, or Engineering.";
+
+      if (career === 'medical') {
+        groupName = "Group 2501: Bio-Mathematics (NEET Track)";
+        groupDesc = "Physics, Chemistry, Biology, Mathematics. Tailored for NEET-UG preparation, MBBS, BDS, Nursing, and Biotech research.";
+      } else if (career === 'engineering') {
+        groupName = "Group 2502: Computer Science & Maths";
+        groupDesc = "Physics, Chemistry, Computer Science, Mathematics. Ideal for B.Tech / B.E. Computer Science, Artificial Intelligence, and Robotics.";
+      } else if (career === 'finance') {
+        groupName = "Group 2702: Commerce & Accountancy";
+        groupDesc = "Commerce, Accountancy, Economics, Business Maths / CA. Premier preparation for Chartered Accountancy (CA Foundation), Law, and Banking.";
+      } else {
+        groupName = "Group 2801: Arts & Humanities";
+        groupDesc = "History, Economics, Political Science, Geography. Premier track for UPSC Civil Services, TNPSC, Journalism, and Law (BA LLB).";
+      }
+
+      document.getElementById('recGroupName').textContent = groupName;
+      document.getElementById('recGroupDesc').textContent = groupDesc;
+    }
+
+    // ================= ADMISSION APPLICATION SUBMISSION =================
+    function handleAdmissionSubmit(e) {
+      e.preventDefault();
+      const randNum = Math.floor(1000 + Math.random() * 9000);
+      const appNumber = `STIS-2025-${randNum}`;
+      document.getElementById('appNumberDisplay').textContent = appNumber;
+      document.getElementById('admissionSuccessSlip').classList.remove('hidden');
+      document.getElementById('admissionSuccessSlip').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // ================= NOTICE MODAL =================
+    function openNoticeModal(title, body) {
+      document.getElementById('noticeModalTitle').textContent = title;
+      document.getElementById('noticeModalBody').textContent = body;
+      document.getElementById('noticeModal').classList.remove('hidden');
+      document.getElementById('noticeModal').classList.add('flex');
+    }
+    function closeNoticeModal() {
+      document.getElementById('noticeModal').classList.add('hidden');
+      document.getElementById('noticeModal').classList.remove('flex');
+    }
+
+    function searchNews() {
+      const q = document.getElementById('newsSearchInput').value.toLowerCase();
+      document.querySelectorAll('.news-card').forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(q) ? 'block' : 'none';
+      });
+    }
+
+    function filterNewsTag(tag) {
+      document.querySelectorAll('.news-tag-btn').forEach(btn => btn.classList.remove('bg-brand-maroon', 'text-white'));
+      event.target.classList.add('bg-brand-maroon', 'text-white');
+      
+      document.querySelectorAll('.news-card').forEach(card => {
+        if (tag === 'all' || card.getAttribute('data-tag') === tag) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function handleMessageSubmit(e) {
+      e.preventDefault();
+      alert("Thank you! Your message has been sent to St. Isabel's Girls Higher Secondary School office desk. We will get back to you shortly.");
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
